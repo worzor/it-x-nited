@@ -1,9 +1,45 @@
-body{
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+body {
+  margin: 0;
+  background-color: #202020;
+  font-family: "Kanit", sans-serif;
 }
-
-.bg{
-    height: 100vh;
-    width: 100%;
-    background-image: url("./CA/GIF.gif");
+.bg {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./CA/GIF.gif");
+  display: none;
+}
+li {
+  color: #fff8f8;
+  font-size: 26px;
+  font-weight: 300;
+  display: inline;
+  cursor: default;
+  margin: 40px;
+}
+.home-cover {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/CA/รูปหน้าhome/หน้าหลัก.png);
+  background-size: cover;
+}
+#header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+}
+#logo {
+  position: absolute;
+  width: 616px;
+  height: 212px;
+  top: 20%;
+  left: 50%;
+}
+#mini-logo {
+  position: absolute;
+  width: 108px;
+  height: 118px;
+  margin: 20px;
 }
