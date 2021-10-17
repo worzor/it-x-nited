@@ -1,8 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+:root{
+  --op: 0;
+}
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
 body {
   margin: 0;
   background-color: #202020;
   font-family: "Kanit", sans-serif;
+}
+.container{
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 1rem;
+  margin: auto;
+  box-sizing: border-box;
 }
 .bg {
   height: 100vh;
@@ -11,7 +26,6 @@ body {
   display: none;
 }
 li {
-  color: #fff8f8;
   font-size: 22px;
   font-weight: 300;
   display: inline;
@@ -19,27 +33,95 @@ li {
   margin: 40px;
 }
 .home-cover {
-  width: 100%;
-  height: 100vh;
+  height: 135vh;
   background-image: url("./CA/รูปหน้าhome/หน้าหลัก.png");
   background-size: cover;
 }
 #header {
   width: 100%;
-  position: fixed;
-  display: flex;
-  justify-content: flex-end;
+  font-size: 22px;
+  height: 100px;
 }
 #logo {
   position: absolute;
+  opacity: calc(calc(100 - var(--op)) * 1%);
   width: 616px;
   height: 212px;
   top: 20%;
-  left: 50%;
+  left: 55%;
 }
 #mini-logo {
   position: absolute;
-  width: 90px; /*ค่าเก่า w 108 h 118*/
-  height: 100px;
+  width: 80px; /*ค่าเก่า w 108 h 118*/
+  height: 90px;
   margin: 20px;
 }
+.flex-center-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.btn{
+  color: #fff8f8;
+}
+.btn-active{
+  color: #FF0D0D;
+}
+
+/*Grid*/
+.grid-parent,
+.column-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.column-8,
+.grid-parent-col8 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.grid-parent > div.span-1,.grid-parent > a.span-1 {
+    grid-column: span 1;
+  }
+  .grid-parent > div.span-2 , .grid-parent-col8 > div.span-2{
+    grid-column: span 2;
+  }
+  .grid-parent > div.span-3 , .grid-parent-col8 > div.span-3{
+    grid-column: span 3;
+  }
+  .grid-parent > div.span-4 , .grid-parent-col8 > div.span-4{
+    grid-column: span 4;
+  }
+  .grid-parent > div.span-5 , .grid-parent-col8 > div.span-5{
+    grid-column: span 5;
+  }
+  .grid-parent > div.span-6 , .grid-parent-col8 > div.span-6{
+    grid-column: span 6;
+  }
+  .grid-parent > div.span-7 , .grid-parent-col8 > div.span-7{
+    grid-column: span 7;
+  }
+  .grid-parent > div.span-8 , .grid-parent-col8 > div.span-8{
+    grid-column: span 8;
+  }
+  .grid-parent > div.span-9 , .grid-parent-col8 > div.span-9{
+    grid-column: span 9;
+  }
+  .grid-parent > div.span-10 , .grid-parent-col8 > div.span-10{
+    grid-column: span 10;
+  }
+  .grid-parent > div.span-11 , .grid-parent-col8 > div.span-11{
+    grid-column: span 11;
+  }
+  .grid-parent > div.span-12 , .grid-parent-col8 > div.span-12{
+    grid-column: span 12;
+  }
+
+  
