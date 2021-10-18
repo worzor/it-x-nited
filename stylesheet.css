@@ -1,6 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+#post{
+  font-size:3em;
+  position:fixed;
+  top:0;
+  left:0;
+  background:#fffc;
+}
+/*Font*/
+section h1,
+section p{
+  color: #fff8f8;
+  font-family: 'Pridi', serif;
+}
+section h1{
+  font-size: 2.1vw;
+}
+section p{
+  font-size: 1.2vw;
+}
+header a{
+  font-size: 1.2vw;
+}
+
 :root{
   --op: 0;
+}
+html{
+  scroll-snap-type: mandatory;
+	scroll-snap-points-y: repeat(100vh);
+	scroll-snap-type: y mandatory;
 }
 header{
   position: fixed;
@@ -9,7 +37,7 @@ header{
 }
 body {
   margin: 0;
-  background-color: #202020;
+  background-color: #222222;
   font-family: "Kanit", sans-serif;
 }
 .container{
@@ -32,11 +60,12 @@ li {
   cursor: default;
   margin: 40px;
 }
+/*
 .home-cover {
-  height: 135vh;
+  height: 140vh;
   background-image: url("./CA/รูปหน้าhome/หน้าหลัก.png");
   background-size: cover;
-}
+}*/
 #header {
   width: 100%;
   font-size: 22px;
@@ -48,7 +77,7 @@ li {
   width: 616px;
   height: 212px;
   top: 20%;
-  left: 55%;
+  right: 10%;
 }
 #mini-logo {
   position: absolute;
@@ -60,6 +89,18 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+.flex-left-parent {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  
+}
+.flex-right-parent {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 a{
   text-decoration: none;
@@ -70,6 +111,49 @@ a{
 }
 .btn-active{
   color: #FF0D0D;
+}
+.img-fit{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.sec-description{
+  padding: 0px 3em;
+}
+
+/*Section Class*/
+.section-main{
+  height: 125vh;
+  width: 100%;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+.section-nm{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+section{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+/*Img and text in section control*/
+.img-nr{
+  width: 85%;
+  height: auto;
+}
+.img-big{
+  width: 100%;
+  height: auto;
+}
+.txt-fit{
+  width: 100%;
+  height: 100%;
 }
 
 /*Grid*/
@@ -87,40 +171,48 @@ a{
   grid-gap: 0.5rem;
 }
 
-.grid-parent > div.span-1,.grid-parent > a.span-1 {
+.column-2,
+.grid-parent-col2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+  height: 100%;
+}
+
+.grid-parent > div.span-1,.grid-parent > a.span-1, .grid-parent-col2 > div.span-1 {
     grid-column: span 1;
   }
-  .grid-parent > div.span-2 , .grid-parent-col8 > div.span-2{
+  .grid-parent > div.span-2 , .grid-parent-col8 > div.span-2 {
     grid-column: span 2;
   }
-  .grid-parent > div.span-3 , .grid-parent-col8 > div.span-3{
+  .grid-parent > div.span-3 , .grid-parent-col8 > div.span-3 {
     grid-column: span 3;
   }
-  .grid-parent > div.span-4 , .grid-parent-col8 > div.span-4{
+  .grid-parent > div.span-4 , .grid-parent-col8 > div.span-4 {
     grid-column: span 4;
   }
-  .grid-parent > div.span-5 , .grid-parent-col8 > div.span-5{
+  .grid-parent > div.span-5 , .grid-parent-col8 > div.span-5 {
     grid-column: span 5;
   }
-  .grid-parent > div.span-6 , .grid-parent-col8 > div.span-6{
+  .grid-parent > div.span-6 , .grid-parent-col8 > div.span-6 {
     grid-column: span 6;
   }
-  .grid-parent > div.span-7 , .grid-parent-col8 > div.span-7{
+  .grid-parent > div.span-7 , .grid-parent-col8 > div.span-7 {
     grid-column: span 7;
   }
-  .grid-parent > div.span-8 , .grid-parent-col8 > div.span-8{
+  .grid-parent > div.span-8 , .grid-parent-col8 > div.span-8 {
     grid-column: span 8;
   }
-  .grid-parent > div.span-9 , .grid-parent-col8 > div.span-9{
+  .grid-parent > div.span-9 , .grid-parent-col8 > div.span-9 {
     grid-column: span 9;
   }
-  .grid-parent > div.span-10 , .grid-parent-col8 > div.span-10{
+  .grid-parent > div.span-10 , .grid-parent-col8 > div.span-10 {
     grid-column: span 10;
   }
-  .grid-parent > div.span-11 , .grid-parent-col8 > div.span-11{
+  .grid-parent > div.span-11 , .grid-parent-col8 > div.span-11 {
     grid-column: span 11;
   }
-  .grid-parent > div.span-12 , .grid-parent-col8 > div.span-12{
+  .grid-parent > div.span-12 , .grid-parent-col8 > div.span-12 {
     grid-column: span 12;
   }
 
