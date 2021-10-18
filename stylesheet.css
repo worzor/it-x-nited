@@ -8,6 +8,7 @@
   top:0;
   left:0;
   background:#fffc;
+  z-index: 999;
 }
 /*Font*/
 section h1,
@@ -24,6 +25,13 @@ section p{
 header a{
   font-size: 1.2vw;
 }
+.name{
+  font-size: 2vw;
+}
+#section-nm-3 p{
+  margin: 0;
+}
+
 
 html{
   scroll-snap-type: mandatory;
@@ -31,8 +39,9 @@ html{
 	scroll-snap-type: y mandatory;
 }
 header{
-  position: fixed;
+  position: absolute;
   width: 100%;
+  margin-top: 20px;
   z-index: 999;
 }
 body {
@@ -70,6 +79,20 @@ li {
   font-size: 22px;
   height: 100px;
 }
+.header{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-right{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30vw;
+}
+.nav-right a{
+  margin: 0 30px;
+}
+
 #logo {
   position: absolute;
   opacity: calc(calc(100 - var(--op)) * 1%);
@@ -79,10 +102,8 @@ li {
   right: 10%;
 }
 #mini-logo {
-  position: absolute;
-  width: 80px; /*ค่าเก่า w 108 h 118*/
-  height: 90px;
-  margin: 20px;
+  width: auto; 
+  max-height: 5vw;
 }
 .flex-center-parent {
   display: flex;
@@ -150,9 +171,51 @@ section{
   width: 100%;
   height: auto;
 }
+.img-full{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
 .txt-fit{
   width: 100%;
   height: 100%;
+}
+.txt-highlight-3{
+  position: relative;
+  background: transparent;
+  padding-left: 5px;
+  transition: 1s;
+}
+.txt-highlight-3:after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  animation: highlight-anim 2s;
+  animation-fill-mode: forwards;
+}
+.des-top{
+  position: absolute; top: 3vh; left: 20vw;
+}
+.des-bottom{
+  position: absolute; bottom: 7vh; right: 25vw;
+}
+
+@keyframes highlight-anim {
+  from {
+    width: 0;
+    background: linear-gradient(transparent 45%, #FD2D2D 41%, #FD2D2D 80%, transparent 81%);
+  }
+
+  to {
+    width: 102%;
+    background: linear-gradient(transparent 45%, #FD2D2D 41%, #FD2D2D 80%, transparent 81%);
+  }
+
 }
 
 /*Grid*/
@@ -181,7 +244,7 @@ section{
 .grid-parent > div.span-1,.grid-parent > a.span-1, .grid-parent-col2 > div.span-1 {
     grid-column: span 1;
   }
-  .grid-parent > div.span-2 , .grid-parent-col8 > div.span-2 {
+  .grid-parent > div.span-2 , .grid-parent-col8 > div.span-2 , .grid-parent-col2 > div.span-2{
     grid-column: span 2;
   }
   .grid-parent > div.span-3 , .grid-parent-col8 > div.span-3 {
