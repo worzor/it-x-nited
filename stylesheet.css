@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+:root{
+  --op: 0;
+}
 #post{
   font-size:3em;
   position:fixed;
@@ -22,9 +25,6 @@ header a{
   font-size: 1.2vw;
 }
 
-:root{
-  --op: 0;
-}
 html{
   scroll-snap-type: mandatory;
 	scroll-snap-points-y: repeat(100vh);
@@ -47,11 +47,10 @@ body {
   margin: auto;
   box-sizing: border-box;
 }
-.bg {
+#loading-sc {
   height: 100vh;
   width: 100%;
   background-image: url("./CA/GIF.gif");
-  display: none;
 }
 li {
   font-size: 22px;
