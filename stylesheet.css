@@ -17,16 +17,16 @@ section p{
   font-family: 'Pridi', serif;
 }
 section h1{
-  font-size: 2.1vw;
+  font-size: max(21px , 2.1vw);
 }
 section p{
-  font-size: 1.2vw;
+  font-size: max(14px , 1.2vw);
 }
 header a{
-  font-size: 1.2vw;
+  font-size: max(14px , 1.2vw);
 }
 .name{
-  font-size: 2vw;
+  font-size: max(19px , 2vw);
 }
 #section-nm-3 p{
   margin: 0;
@@ -34,9 +34,9 @@ header a{
 
 
 html{
-  scroll-snap-type: mandatory;
+  /*scroll-snap-type: mandatory;
 	scroll-snap-points-y: repeat(100vh);
-	scroll-snap-type: y mandatory;
+	scroll-snap-type: y mandatory;*/
 }
 header{
   position: absolute;
@@ -137,9 +137,6 @@ a{
   width: 100%;
   object-fit: cover;
 }
-.sec-description{
-  padding: 0px 3em;
-}
 
 /*Section Class*/
 .section-main{
@@ -162,9 +159,22 @@ section{
   scroll-snap-align: start;
 }
 
+#section-nm-3{
+  height: 120vh; overflow: visible;
+  margin-bottom: 500px;
+}
+
 /*Img and text in section control*/
 .img-nr{
   width: 85%;
+  height: auto;
+}
+.img-nr-2{
+  width: 45vw;
+  height: auto;
+}
+.img-sm{
+  width: 60%;
   height: auto;
 }
 .img-big{
@@ -176,6 +186,14 @@ section{
   height: 100vh;
   object-fit: cover;
 }
+.img-gscale{
+  filter: grayscale(100%);
+  transition: 5s;
+}
+.img-gscale-active{
+  filter: grayscale(0%);
+  transition: 5s;
+}
 .txt-fit{
   width: 100%;
   height: 100%;
@@ -183,7 +201,7 @@ section{
 .txt-highlight-3{
   position: relative;
   background: transparent;
-  padding-left: 5px;
+  /*padding-left: 5px;*/
   transition: 1s;
 }
 .txt-highlight-3:after{
@@ -199,10 +217,18 @@ section{
   animation-fill-mode: forwards;
 }
 .des-top{
-  position: absolute; top: 3vh; left: 20vw;
+  position: absolute; top: -3vh; left: 20vw;
 }
 .des-bottom{
-  position: absolute; bottom: 7vh; right: 25vw;
+  position: absolute; bottom: -3vh; right: 25vw;
+}
+.sec-description{
+  padding: 0px 3em;
+}
+.sec-description-right{
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
 @keyframes highlight-anim {
