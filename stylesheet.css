@@ -39,6 +39,7 @@ html{
   /*scroll-snap-type: mandatory;
 	scroll-snap-points-y: repeat(100vh);
 	scroll-snap-type: y mandatory;*/
+  scroll-behavior: smooth;
 }
 header{
   position: absolute;
@@ -174,6 +175,12 @@ section{
 #section-nm-7, #section-nm-9, #section-nm-10{
   margin-top: 250px;
   overflow: visible;
+}
+footer{
+  position: relative;
+  margin-top: 100px;
+  height: 100px;
+  width: 100%;
 }
 
 
@@ -411,4 +418,96 @@ section{
     grid-column: span 12;
   }
 
+  /*Arrow*/
+  .arrow.down,
+  .arrow.down:before,
+  .arrow.up,
+  .arrow.up:before{
+    position: absolute;
+    cursor: pointer;
+    }
+  .arrow.down{
+    width: 20px;
+    height: 20px;
+    bottom: 5%;
+    right: 12%;
+    margin: -20px 0 0 -20px;
+    -webkit-transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    border-right: 4px #FD2D2D solid;
+    border-bottom: 4px #FD2D2D solid;
+    opacity: calc(calc(200 - var(--op)) * 1%);
+    }
+  .arrow.down:before{
+    content: '';
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    right: 20%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px #FD2D2D solid;
+    border-bottom: 2px #FD2D2D solid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    }
+  .arrow.up{
+      width: 20px;
+      height: 20px;
+      margin: -20px 0 0 -20px;
+      -webkit-transform: rotate(-135deg);
+      border-left: none;
+      border-top: none;
+      border-right: 4px #FD2D2D solid;
+      border-bottom: 4px #FD2D2D solid;
+      z-index: 1;
+      }
+  .arrow.up:before{
+      content: '';
+      width: 14px;
+      height: 14px;
+      top: 50%;
+      right: 21%;
+      margin: -10px 0 0 -10px;
+      border-left: none;
+      border-top: none;
+      border-right: 2px #FD2D2D solid;
+      border-bottom: 2px #FD2D2D solid;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-name: arrow_down;
+      }
+    .arrow-back-top{
+      position: absolute; text-align: center; width: 100%; color: #FD2D2D;
+      font-size: 18px; 
+    }
+    .arrow-back-top p{
+      padding-right: 10px; margin: 10px 0;
+    }
+  @keyframes arrow{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+    }
+  @keyframes arrow_down{
+    0%{
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+    100%{
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+    }
+    
   
+    
+    
+    
