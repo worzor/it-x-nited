@@ -288,19 +288,19 @@ footer{
   position: absolute; z-index: 1;
 }
 .item-1{
-  left: 20.5vh; top: 3.5vw; padding: 40px; width: 120px;
+  left: 20.5vh; top: 3.5vw; padding: 40px; width: 120px; transform: scale(var(--scale));
 }
 .item-2{
-  bottom: 20vh; left: 5vw; padding: 40px; width: 100px;
+  bottom: 20vh; left: 5vw; padding: 40px; width: 100px; transform: scale(var(--scale));
 }
 .item-3{
-  bottom: 10vh; left: 32vw; padding: 25px; width: 150px;
+  bottom: 10vh; left: 32vw; padding: 25px; width: 150px; transform: scale(var(--scale));
 }
 .item-4{
-  top: 30vh; right: 8vw; padding: 20px; width: 160px;
+  top: 30vh; right: 8vw; padding: 20px; width: 160px; transform: scale(var(--scale_2));
 }
 .item-5{
-  bottom: 20vh; right: 22vw; padding: 25px; width: 130px;
+  bottom: 20vh; right: 22vw; padding: 25px; width: 130px; transform: scale(var(--scale_2));
 }
 .pos-item-1{
   left: 20.5vh; top: 3.5vw;
@@ -327,9 +327,11 @@ footer{
 }
 .sec1 .circle-nr{
   transform: scale(var(--scale));
+  transition: 0.1s;
 }
 .sec2 .circle-nr{
   transform: scale(var(--scale_2));
+  transition: 0.1s;
 }
 .circle-sm{
   z-index: 0;
@@ -341,9 +343,11 @@ footer{
 }
 .sec1 .circle-sm{
   transform: scale(var(--scale));
+  transition: 0.1s;
 }
 .sec2 .circle-sm{
   transform: scale(var(--scale_2));
+  transition: 0.1s;
 }
 @keyframes highlight-anim {
   from {
