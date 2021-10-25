@@ -1,20 +1,22 @@
 var load_var
 var count = 0; var tmp = 0;
-function onscrollFunction() {
+function onscrollFunction(page) {
     let newY = window.scrollY;
     document.body.style.setProperty("--op", newY * 0.3);
     document.querySelector("#yyy").innerText = scrollY;
-    var sec_1H = document.getElementById("section-nm-1").getBoundingClientRect().y;
-    var sec_2H = document.getElementById("section-nm-1-2").getBoundingClientRect().y;
-    var winH = window.innerHeight; 
-    console.log(((sec_1H - winH/3) * -1) * 0.005)
-    if(sec_1H - winH/1.5 < 0 && sec_1H + winH/2 - winH/2 > 0){ /*เทียบความสูง ระหว่างของบน เเละ ขอบล่าง ของ section 1 เเละ 2*/
-        if(((sec_1H - winH/3) * -1) * 0.005 > 0){
-            document.body.style.setProperty("--scale", ((sec_1H - winH/3) * -1) * 0.0035);
-        }
-    }if(sec_2H - winH/1.5 < 0 && sec_2H + winH/2 - winH/2 > 0){
-        if(((sec_2H - winH/3) * -1) * 0.005 > 0){
-            document.body.style.setProperty("--scale_2", ((sec_2H - winH/3) * -1) * 0.0035);
+    if(page == 1){
+        var sec_1H = document.getElementById("section-nm-1").getBoundingClientRect().y;
+        var sec_2H = document.getElementById("section-nm-1-2").getBoundingClientRect().y;
+        var winH = window.innerHeight; 
+        console.log(((sec_1H - winH/3) * -1) * 0.005)
+        if(sec_1H - winH/1.5 < 0 && sec_1H + winH/2 - winH/2 > 0){ /*เทียบความสูง ระหว่างของบน เเละ ขอบล่าง ของ section 1 เเละ 2*/
+            if(((sec_1H - winH/3) * -1) * 0.005 > 0){
+                document.body.style.setProperty("--scale", ((sec_1H - winH/3) * -1) * 0.0035);
+            }
+        }if(sec_2H - winH/1.5 < 0 && sec_2H + winH/2 - winH/2 > 0){
+            if(((sec_2H - winH/3) * -1) * 0.005 > 0){
+                document.body.style.setProperty("--scale_2", ((sec_2H - winH/3) * -1) * 0.0035);
+            }
         }
     }
     trigger_AllBar();

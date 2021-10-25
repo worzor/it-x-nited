@@ -23,7 +23,7 @@ section p {
 	font-family: 'Pridi', serif;
 }
 
-section h1 {
+section h1{
 	font-size: max(21px, 2.1vw);
 }
 
@@ -50,11 +50,16 @@ html {
 	scroll-behavior: smooth;
 }
 
-header {
+header .main {
 	position: absolute;
 	width: 100%;
 	margin-top: 20px;
 	z-index: 999;
+}
+
+header .normal {
+	width: 100%;
+	margin-top: 20px;
 }
 
 body {
@@ -129,6 +134,27 @@ li {
 	max-height: 5vw;
 }
 
+#mini-logo-sm{
+	width: auto;
+	max-height: 3vw;
+	padding: 1vw 1vw;
+}
+
+#des-header-big{
+	color: #FD2D2D;
+	font-family: "Kanit", sans-serif;
+	font-size: max(40px , 4vw);
+	margin: 0;
+	font-weight: 600;
+}
+
+#des-para-big{
+	color: #fff8f8;
+	font-family: "Kanit", sans-serif;
+	font-size: max(21px, 1.8vw);
+	margin: 0;
+}
+
 .flex-center-parent {
 	display: flex;
 	justify-content: center;
@@ -169,7 +195,6 @@ a {
 
 
 /*Section Class*/
-
 .section-main {
 	height: 125vh;
 	width: 100%;
@@ -190,6 +215,10 @@ section {
 	overflow: hidden;
 	position: relative;
 	scroll-snap-align: start;
+}
+
+section.sec-sm{
+	height: 88vh;
 }
 
 #section-nm-3 {
@@ -264,6 +293,10 @@ footer {
 	transition: 5s;
 }
 
+.mock-container{
+	right: 0; top: 0; margin-top: 50px; height: auto; position: absolute;
+}
+
 .crop-1 {
 	width: 41.6vw;
 	height: 34.1vw;
@@ -304,6 +337,19 @@ footer {
 	animation-fill-mode: forwards;
 }
 
+.text-header{
+	color: #FD2D2D;
+}
+
+
+
+.sub-container{
+	width: auto;
+	height: auto;
+	padding: 0 0 0 20vw;
+	position: relative;
+}
+
 .des-top {
 	position: absolute;
 	top: -3vh;
@@ -324,6 +370,10 @@ footer {
 	display: flex;
 	justify-content: end;
 	align-items: end;
+}
+
+#the-girl{
+	padding-right: 5vw;
 }
 
 .img-comment {
@@ -409,6 +459,17 @@ footer {
 	transform: scale(var(--scale_2));
 }
 
+.item-danger{
+	position: absolute;
+	filter: saturate(0.3);
+	height: auto;
+}
+
+.item-danger:hover{
+	filter: saturate(1);
+	transition: 0.5s;
+}
+
 .pos-item-1 {
 	left: 20.5vh;
 	top: 3.5vw;
@@ -433,6 +494,86 @@ footer {
 	bottom: 20vh;
 	right: 22vw;
 }
+
+.pos-mock-1{
+	right: 28vw; top: 7vw;
+}
+
+.pos-mock-2{
+	right: 19vw; top: 4vw;
+}
+
+.pos-mock-3{
+	right: 13vw; top: 7.5vw;
+}
+
+.pos-mock-4{
+	right: 31vw; top: 15vw;
+}
+
+.pos-mock-5{
+	right: 22vw; top: 17.5vw;
+}
+
+.pos-mock-6{
+	right: 16vw; top: 14.2vw;
+}
+
+.pos-mock-7{
+	right: 10.5vw; top: 16vw;
+}
+
+.pos-mock-8{
+	right: 29.5vw; top: 27vw;
+}
+
+.pos-mock-9{
+	right: 17vw; top: 28vw;
+}
+
+.pos-mock-10{
+	right: 12.5vw; top: 28vw;
+}
+
+img.pos-mock-1{
+	width: 5vw;
+}
+
+img.pos-mock-2{
+	width: 7.5vw;
+}
+img.pos-mock-3{
+	width: 5vw;
+}
+
+img.pos-mock-4{
+	width: 4vw;
+}
+
+img.pos-mock-5{
+	width: 8vw;
+}
+
+img.pos-mock-6{
+	width: 5.5vw;
+}
+
+img.pos-mock-7{
+	width: 4vw;
+}
+
+img.pos-mock-8{
+	width: 4.5vw;
+}
+
+img.pos-mock-9{
+	width: 11vw;
+}
+
+img.pos-mock-10{
+	width: 3vw;
+}
+
 
 .circle-nr {
 	/*.circle-nr.active ถ้าใช้เเบบ trigger*/
