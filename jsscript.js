@@ -46,6 +46,55 @@ function trigger_el(el){ /*Function ย่อยสำหรับ Trigger ต�
     }
 }
 
+function mockup_click(el_mock){
+    document.querySelector("#text-container").classList.add("fade-in-text");
+    var mockupAll = document.querySelectorAll("#mock");
+    for(let mock = 0; mock <= mockupAll.length; mock++){
+        if(mock == el_mock){
+            mockupAll[mock].classList.add("active");
+            mock_infoShow(el_mock);
+        }else{
+            mockupAll[mock].classList.remove("active");
+        }
+    }
+}
+
+function mock_infoShow(el_mock){ /*Function สำหรับเเสดงข้อความในหน้า ของอันตรายใกล้ตัวเเบบ info*/
+    if(el_mock == 0){
+        document.getElementById("mock-sign").src = "./CA/ตราสัญลักษณ์/ต่อสิ่งแวดล้ม.png";
+        document.querySelector("#mock-info-header").innerText = "เป็นอันตรายต่อสิ่งแวดล้อม";
+        document.querySelector("#mock-info-para").innerText = "เป็นอันตรายต่อสิ่งแวดล้อมในน้ำ ทั้งเฉียบพลันและเรื้อรัง เช่น หลอดฟลูออเรสเซนต์ ขวดยา ถ่านไฟฉาย กระป๋องสีสเปรย์ กระป๋อง ยาฆ่าแมลง ภาชนะบรรจุสารอันตรายต่าง ๆ";
+    }if(el_mock == 1){
+        document.getElementById("mock-sign").src = "./CA/ตราสัญลักษณ์/กัดกร่อน.png";
+        document.querySelector("#mock-info-header").innerText = "สารกัดกร่อน";
+        document.querySelector("#mock-info-para").innerText = "สารที่มีปฏิกิริยาเคมีจะก่อให้เกิดความเสียหายต่อเนื้อเยื่อของสิ่งมีชีวิตและกัดกร่อนอุปกรณ์ไอระเหยเกิดการระคายเคืองต่อจมูกและตา เช่น ภาชนะบรรจุน้ํากรดในแบตเตอรี่รถยนต์ หรือภาชนะบรรจุน้ํายาทําความสะอาด";
+    }
+    mytime = setTimeout(del_fede, 300);
+}
+
+function del_fede(){
+    document.querySelector("#text-container").classList.remove("fade-in-text");
+}
+
+function mockup_submit(el_mock){ /*เก็บ element ของ mock ที่ส่งมาในหน้าของอันตรายใกล้ตัวที่จะส่งไปหน้าต่อไป เข้าสู่ local storage*/
+    localStorage.setItem("MOCK_ELEMENT", el_mock);
+    return;
+}
+
+function mockup_call(){
+    var mockup_el = localStorage.getItem("MOCK_ELEMENT");
+    mockup_click(mockup_el);
+}
+
+
+function loading_Function() {
+    myVar = setTimeout(showPage, 3000);
+  }
+  
+function showPage() {
+    document.getElementById("loading-sc").style.display = "none";
+    document.getElementById("site-body").style.display = "block";
+}
 
 /*var head_id = ""
 var parent_id = ""
@@ -54,15 +103,6 @@ function trigger(head_id, parent_id){
     for(let i = 0; i < time_all.length; i++){
         time_all[i].classList.add("active");
     }
-}*/
-
-/*function loading_Function() {
-    myVar = setTimeout(showPage, 3000);
-  }
-  
-function showPage() {
-    document.getElementById("loading-sc").style.display = "none";
-    document.getElementById("site-body").style.display = "block";
 }*/
 
 /*
