@@ -3,7 +3,7 @@ var count = 0; var tmp = 0;
 function onscrollFunction(page) {
     let newY = window.scrollY;
     document.body.style.setProperty("--op", newY * 0.3);
-    document.querySelector("#yyy").innerText = scrollY;
+    /*document.querySelector("#yyy").innerText = scrollY;*/
     if(page == 1){
         var sec_1H = document.getElementById("section-nm-1").getBoundingClientRect().y;
         var sec_2H = document.getElementById("section-nm-1-2").getBoundingClientRect().y;
