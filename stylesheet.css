@@ -319,9 +319,16 @@ footer {
 	transition: 5s;
 }
 
-.img-sign{
+.img-sign.active{
 	width: 10vw;
 	margin: 5vh 0;
+	position: relative;
+}
+
+.img-sign{
+	width: 0;
+	margin: 0;
+	position: absolute;
 }
 
 .mock-container{

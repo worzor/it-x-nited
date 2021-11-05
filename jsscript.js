@@ -46,27 +46,28 @@ function trigger_el(el){ /*Function ย่อยสำหรับ Trigger ต�
     }
 }
 
-function mockup_click(el_mock){
+function mockup_click(el_mock){ /*Function หลักที่ใช้ควบคุมการเเสดงผลของ mock info*/
     document.querySelector("#des-click").classList.remove("active")
     document.querySelector("#text-container").classList.add("fade-in-text");
+    var mockSign = document.querySelectorAll("#mock-sign");
     var mockupAll = document.querySelectorAll("#mock");
     for(let mock = 0; mock <= mockupAll.length; mock++){
         if(mock == el_mock){
             mockupAll[mock].classList.add("active");
+            mockSign[mock].classList.add("active")
             mock_infoShow(el_mock);
         }else{
             mockupAll[mock].classList.remove("active");
+            mockSign[mock].classList.remove("active");
         }
     }
 }
 
 function mock_infoShow(el_mock){ /*Function สำหรับเเสดงข้อความในหน้า ของอันตรายใกล้ตัวเเบบ info*/
     if(el_mock == 0){
-        document.getElementById("mock-sign").src = "./CA/ตราสัญลักษณ์/ต้องระวัง.png";
         document.querySelector("#mock-info-header").innerText = "สารที่ต้องระวัง";
         document.querySelector("#mock-info-para").innerText = "สารที่มีพิษเฉียบพลัน อันตรายเมื่อสัมผัสกับผิวหนัง และดวงตา มีผลต่อทางเดินหายใจ ควรใช้ในที่อากาศถ่ายเท เช่น สีสเปรย์ สารปรอทในเครื่องสำอาง";
     }if(el_mock == 1){
-        document.getElementById("mock-sign").src = "./CA/ตราสัญลักษณ์/กัดกร่อน.png";
         document.querySelector("#mock-info-header").innerText = "สารกัดกร่อน";
         document.querySelector("#mock-info-para").innerText = "สารที่มีปฏิกิริยาเคมีจะก่อให้เกิดความเสียหายต่อเนื้อเยื่อของสิ่งมีชีวิตและกัดกร่อนอุปกรณ์ไอระเหยเกิดการระคายเคืองต่อจมูกและตา เช่น ภาชนะบรรจุน้ํากรดในแบตเตอรี่รถยนต์ หรือภาชนะบรรจุน้ํายาทําความสะอาด";
     }
