@@ -83,6 +83,41 @@ function mockup_submit(el_mock){ /*เก็บ element ของ mock ที่
     return;
 }
 
+function things_click(el_thing){ /*Function หลักที่ใช้ควบคุมการเเสดงผลของ danger things info*/
+    document.querySelector("#des-click").classList.remove("active")
+    document.querySelector("#text-container").classList.add("fade-in-text");
+    var thingBox = document.querySelectorAll("#thing-box");
+    var thingsAll = document.querySelectorAll("#thing");
+    for(let thing = 0; thing <= thingsAll.length; thing++){
+        if(thing == el_thing){
+            thingBox[el_thing].classList.add("active");
+            thingsAll[el_thing].classList.add("active");
+            things_infoShow(el_thing)
+        }else{
+            thingBox[thing].classList.remove("active");
+            thingsAll[thing].classList.remove("active");
+        }
+    }
+}
+
+function things_infoShow(el_thing){ /*Function สำหรับเเสดงข้อความในหน้า วิธีการป้องกัน info*/
+    document.querySelector("#mock-info-header2").innerText = "";
+    document.querySelector("#mock-info-para2").innerText = "";
+    if(el_thing == 0){
+        document.querySelector("#mock-info-header").innerText = "สารที่ต้องระวัง";
+        document.querySelector("#mock-info-para").innerText = "สารที่มีพิษเฉียบพลัน อันตรายเมื่อสัมผัสกับผิวหนัง และดวงตา มีผลต่อทางเดินหายใจ ควรใช้ในที่อากาศถ่ายเท เช่น สีสเปรย์ สารปรอทในเครื่องสำอาง";
+    }if(el_thing == 1){
+        document.querySelector("#mock-info-header").innerText = "สารกัดกร่อน";
+        document.querySelector("#mock-info-para").innerText = "สารที่มีปฏิกิริยาเคมีจะก่อให้เกิดความเสียหายต่อเนื้อเยื่อของสิ่งมีชีวิตและกัดกร่อนอุปกรณ์ไอระเหยเกิดการระคายเคืองต่อจมูกและตา เช่น ภาชนะบรรจุน้ํากรดในแบตเตอรี่รถยนต์ หรือภาชนะบรรจุน้ํายาทําความสะอาด";
+    }if(el_thing == 7){
+        document.querySelector("#mock-info-header").innerText = "ของมีคม ใบมีด ฝากระป๋อง เข็มเย็บผ้า";
+        document.querySelector("#mock-info-para").innerText = "ให้นำกระดาษหนังสือพิมพ์มาห่อเเละใส่ถุงไว้พร้อมเขียนระบุให้กับพนักงานเก็บขยะ";
+        document.querySelector("#mock-info-header2").innerText = "ไม้เสียบลูกชิ้น";
+        document.querySelector("#mock-info-para2").innerText = "หักไม้เป็นท่อน ๆ ก่อน แล้วนำหนังยางมารัดให้แน่นก่อนทิ้ง";
+    }
+    mytime = setTimeout(del_fede, 300);
+}
+
 function mockup_call(){
     var mockup_el = localStorage.getItem("MOCK_ELEMENT");
     mockup_click(mockup_el);

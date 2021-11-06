@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&display=swap" rel="stylesheet">
+
+    <title>สิ่งของอันตรายใกล้ตัว</title>
+    <link rel="icon" href="./CA/รูปหน้าhome/โลโก้เล็ก.png">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script src="./jsscript.js"></script>
+</head>
+<body onload="" id="body"> <!--onload="loading_Function()"-->
+    <div id="post">
+        Y = <span id="yyy">0</span>
+    </div>
+    <!--<div id="loading-sc"> 
+
+    </div>-->
+    <div style="display: ;" id="site-body-danger-things">
+        <header>
+            <div class="header normal">
+                <div class="nav-left">
+                    <a href="./index.html"><img src="./CA/รูปหน้าhome/โลโก้เล็ก.png" alt="mini-logo" id="mini-logo-sm"></a>
+                </div>
+                <div class="nav-right">
+                    <a href="index.html" class="btn">หน้าหลัก</a>
+                    <a href="dangerous_thing_nearby.html" class="btn">ของอันตรายใกล้ตัว</a>
+                    <a href="dangerous_prevent.html" class="btn-active">วิธีป้องกัน</a>
+                    <a href="#!" class="btn">เกม</a>
+                </div>
+            </div>
+        </header>
+        <section class="flex-top_down-parent" id="section-main-info">
+            <div class="sub-container">
+                <h1 id="des-header-big">แยกของอันตรายด้วยมือเรา</h1>
+                <p id="des-para-big">สามารถจัดเก็บของอันตรายได้ด้วยตัวเอง ดังนี้</p>
+                <h1 id="des-click" class="click active">ลองคลิกที่สิ่งของทางด้านขวาดูสิ!</h1>
+                <div id="text-container">
+                    <div id="thing-box" class="thing-box">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/ต้องระวัง.png">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/กัดกร่อน.png">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/ระเบิด.png">
+                    </div>
+                    <div id="thing-box" class="thing-box">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/กัดกร่อน.png">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/ไวไฟ.png">
+                    </div>
+                    <div id="thing-box" class="thing-box">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/พิษ.png">
+                    </div>
+                    <div id="thing-box" class="thing-box">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/ต่อสิ่งแวดล้ม.png">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/ไวไฟ.png">
+                    </div>
+                    <div id="thing-box" class="thing-box">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/ต่อสิ่งแวดล้ม.png">
+                    </div>
+                    <div id="thing-box" class="thing-box">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/ติดเชื้อ.png">
+                    </div>
+                    <div id="thing-box" class="thing-box">
+                        <img class="thing-sign" src="./CA/ตราสัญลักษณ์/ติดเชื้อ.png">
+                    </div>
+                    <div id="thing-box" class="thing-box"><div class="empty"></div></div>
+                    <h1 id="mock-info-header" class="text-header"></h1>
+                    <p id="mock-info-para" style="padding-right: 52vw;"></p>
+                    <h1 id="mock-info-header2" class="text-header"></h1>
+                    <p id="mock-info-para2" style="padding-right: 52vw;"></p>
+                </div>
+                    <div class="mock-container">
+                        <a><img id="thing" class="item-danger pos-thing-1" onclick="things_click(0)" src="./CA/แยกของอันตราย/สเปรย์.PNG"></a>
+                        <a><img id="thing" class="item-danger pos-thing-2" onclick="things_click(1)" src="./CA/แยกของอันตราย/น้ำมัน+ลิควิด.png"></a>
+                        <a><img id="thing" class="item-danger pos-thing-3" onclick="things_click(2)" src="./CA/แยกของอันตราย/ยา.png"></a>
+                        <a><img id="thing" class="item-danger pos-thing-4" onclick="things_click(3)" src="./CA/แยกของอันตราย/หลอดไฟ.PNG"></a>
+                        <a><img id="thing" class="item-danger pos-thing-5" onclick="things_click(4)" src="./CA/แยกของอันตราย/ถ่าน.PNG"></a>
+                        <a><img id="thing" class="item-danger pos-thing-6" onclick="things_click(5)" src="./CA/แยกของอันตราย/แมส.PNG"></a>
+                        <a><img id="thing" class="item-danger pos-thing-7" onclick="things_click(6)" src="./CA/แยกของอันตราย/ปรอท.png"></a>
+                        <a><img id="thing" class="item-danger pos-thing-8" onclick="things_click(7)" src="./CA/แยกของอันตราย/เซ็ทมีคม.png"></a>
+                    </div>
+            </div>
+        </section>
+</body>
+</html>

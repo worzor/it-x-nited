@@ -331,6 +331,28 @@ footer {
 	position: absolute;
 }
 
+.thing-sign{
+	width: 10vw;
+	margin: 5vh 5px;
+	position: relative;
+}
+
+.thing-box.active{
+	width: auto;
+	display: flex;
+	position: relative;
+	visibility: visible;
+}
+
+.thing-box{
+	visibility: hidden;
+	width: 0;
+	position: absolute;
+}
+
+.thing-box .empty{
+	height: 10vh;
+}
 .mock-container{
 	right: 0; top: 0; margin-top: 50px; height: auto; position: absolute;
 }
@@ -574,7 +596,8 @@ footer {
 }
 
 .item-danger.active{
-	filter: saturate(1);
+	filter: drop-shadow(0px 0px 7px #FD2D2D );
+	transition: 0.5s;
 }
 
 .pos-item-1 {
@@ -681,6 +704,37 @@ img.pos-mock-10{
 	width: 3vw;
 }
 
+.pos-thing-1{
+	width: 3.5vw; right: 24vw; top: 3vw;
+}
+
+.pos-thing-2{
+	width: 9vw; right: 11vw; top: 3vw;
+}
+
+.pos-thing-3{
+	width: 8.5vw; right: 25vw; top: 16vw;
+}
+
+.pos-thing-4{
+	width: 5.5vw; right: 17vw; top: 19vw;
+}
+
+.pos-thing-5{
+	width: 4vw; right: 9vw; top: 19.5vw;
+}
+
+.pos-thing-6{
+	width: 14vw; right: 24vw; top: 30.5vw;
+}
+
+.pos-thing-7{
+	width: 1.75vw; right: 21vw; top: 29.5vw;
+}
+
+.pos-thing-8{
+	width: 13.75vw; right: 6vw; top: 29.5vw;
+}
 
 .circle-nr {
 	/*.circle-nr.active ถ้าใช้เเบบ trigger*/
