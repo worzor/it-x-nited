@@ -1,13 +1,14 @@
 var load_var
 var count = 0; var tmp = 0;
+var winH = 0;
 function onscrollFunction(page) {
     let newY = window.scrollY;
     document.body.style.setProperty("--op", newY * 0.3);
+    winH = window.innerHeight;
     /*document.querySelector("#yyy").innerText = scrollY;*/
     if(page == 1){
         var sec_1H = document.getElementById("section-nm-1").getBoundingClientRect().y;
         var sec_2H = document.getElementById("section-nm-1-2").getBoundingClientRect().y;
-        var winH = window.innerHeight; 
         console.log(((sec_1H - winH/3) * -1) * 0.005)
         if(sec_1H - winH/1.5 < 0 && sec_1H + winH/2 - winH/2 > 0){ /*เทียบความสูง ระหว่างของบน เเละ ขอบล่าง ของ section 1 เเละ 2*/
             if(((sec_1H - winH/3) * -1) * 0.005 > 0){
@@ -25,23 +26,33 @@ function onscrollFunction(page) {
 function trigger_AllBar(){ /*Function ใหญ่ที่จะ Trigger ทุก element ที่จะไป call function ย่อยอีกที*/
     let All_bar = document.querySelectorAll("#highlight");
     let All_el = document.querySelectorAll("#element");
+    let All_des = document.querySelectorAll("#description");
     for(let i of All_bar){
         trigger_Bar(i);
     }for(let t of All_el){
         trigger_el(t);
+    }for(let d of All_des){
+        trigger_des(d);
     }
 }
 
 function trigger_Bar(el){ /*Function ย่อยสำหรับ Trigger ตัวของ Highlight*/
     let thisBar = el.getBoundingClientRect().y - (window.innerHeight/2);
-    if(thisBar<0){
+    if((thisBar - (winH / 2)) < 0){
         el.className = "txt-highlight-3";
     }
 }
 
 function trigger_el(el){ /*Function ย่อยสำหรับ Trigger ตัว element ทั่วไปให้ active*/
     let thisTime = el.getBoundingClientRect().y - ((window.innerHeight/2) + 100);
-    if(thisTime<0){
+    if((thisTime - winH) < 0){
+        el.classList.add("active");
+    }
+}
+
+function trigger_des(el){
+    let this_des = el.getBoundingClientRect().y - window.innerHeight;
+    if(this_des < 0){
         el.classList.add("active");
     }
 }
