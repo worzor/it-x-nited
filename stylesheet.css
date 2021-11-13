@@ -1080,7 +1080,123 @@ img.pos-mock-10{
   text-align: end;
 }
 
+/*Heart*/
+.heart {
+	fill: #858585;
+	position: relative;
+	top: 5px;
+	width: 2vw;
+	min-width: 25px;
+	margin: 0 5px;
+}
 
+.heart.active{
+	fill: #FD2D2D;
+}
+
+.heart-containner{
+	width: 100%;
+	margin-top: 15vh;
+	position: absolute;
+}
+
+.heart-sub-containner{
+	padding: 0 24vh; width: 100%;
+}
+
+/*Game*/
+.game-item{
+	position: absolute;
+}
+
+.pos-game-1{
+	width: 5.5vw;
+	left: 20vw;
+	top: 15vw;
+	transform: rotateZ(10deg);
+}
+
+.pos-game-2{
+	width: 3vw;
+	left: 13vw;
+	top: 26vw;
+	transform: rotateZ(-15deg);
+}
+
+.pos-game-3{
+	width: 10vw;
+	left: 22vw;
+	top: 33vw;
+}
+
+.pos-game-4{
+	width: 5.5vw;
+	left: 32vw;
+	top: 15vw;
+}
+
+.pos-game-5{
+	width: 6.5vw;
+	left: 35vw;
+	top: 27vw;
+}
+
+.pos-game-6{
+	width: 2.5vw;
+	left: 43vw;
+	top: 29vw;
+	transform: rotateZ(40deg);
+}
+
+.pos-game-7{
+	width: 9vw;
+	right: 20vw;
+	top: 13vw;
+}
+
+.pos-game-8{
+	width: 8.5vw;
+	right: 32vw;
+	top: 18vw;
+	transform: rotateZ(10deg);
+}
+
+.pos-game-9{
+	width: 5.5vw;
+	right: 35vw;
+	top: 34vw;
+	transform: rotateZ(10deg);
+}
+
+.pos-game-10{
+	width: 7vw;
+	right: 23vw;
+	top: 27vw;
+	transform: rotateZ(-5deg);
+}
+
+.pos-game-11{
+	width: 12.5vw;
+	right: 8vw;
+	top: 37vw;
+}
+
+.pos-game-12{
+	width: 9vw;
+	right: 8vw;
+	top: 21vw;
+	transform: rotateZ(20deg);
+}
+
+.game-item:hover,
+.game-item.active{
+	filter: drop-shadow(0 0 10px #FD2D2D);
+}
+
+.hidden{
+	width: 0;
+	visibility: hidden;
+}
 @keyframes arrow {
 	0% {
 		opacity: 1;
@@ -1102,7 +1218,49 @@ img.pos-mock-10{
 	}
 }
 
+.icon{
+	display: none;
+}
+@media (max-width: 1280px){
+	.heart-sub-containner{
+		padding: 0 15vh; width: 100%;
+	}
+}
 @media (max-width: 768px) {
+
+	.nav-right a {display: none;}
+	.nav-right .icon{
+		float: right;
+		display: block;
+		color: #FD2D2D;
+	}
+	.nav-right{
+		margin: 0;
+	}
+	.nav-left{
+		margin: 0 30px;
+	}
+	.nav-right .fa{
+		font-size: 35px;
+	}
+	.heart-sub-containner{
+		padding: 0;
+		display: flex;
+		justify-content: center;
+	}
+	#mini-logo-sm{
+		width: 35px;
+		max-height: 35px;
+	}
+
+	header .normal{
+		height: 5vh;
+	}
+
+	.header{
+		justify-content: space-between;
+	}
+
 	body{
 	  --h:190;
 	}

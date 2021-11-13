@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>สิ่งของอันตรายใกล้ตัว</title>
+    <link rel="icon" href="./CA/รูปหน้าhome/โลโก้เล็ก.png">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script src="./jsscript.js"></script>
+    <script src="./gamejs.js"></script>
+</head>
+<body onload="" id="body"> <!--onload="loading_Function()"-->
+    <div style="display: ;" id="site-body-danger-things">
+        <header>
+            <div class="header normal">
+                <div class="nav-left">
+                    <a href="./index.html"><img src="./CA/รูปหน้าhome/โลโก้เล็ก.png" alt="mini-logo" id="mini-logo-sm"></a>
+                </div>
+                <div class="nav-right">
+                    <a href="index.html" class="btn">หน้าหลัก</a>
+                    <a href="dangerous_thing_nearby.html" class="btn">ของอันตรายใกล้ตัว</a>
+                    <a href="dangerous_prevent.html" class="btn">วิธีป้องกัน</a>
+                    <a href="game.html" class="btn-active">เกม</a>
+                    <a href="" class="icon" onclick="">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                </div>
+            </div>
+        </header>
+
+        <section id="section-nm-1">
+            <div class="heart-containner flex-left-parent">
+                <div class="heart-sub-containner">
+                <svg id="heart" class="heart active" viewBox="0 0 32 29.6">
+                    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                      c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+                </svg>
+                <svg id="heart" class="heart active" viewBox="0 0 32 29.6">
+                    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                      c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+                </svg>
+                <svg id="heart" class="heart active" viewBox="0 0 32 29.6">
+                    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                      c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+                </svg>
+                </div>
+            </div>
+            <div class="grid-parent-col2 mob-grid-parent-col2" >
+                <div class="span-1 mob-span-2 flex-left-parent" style="position: relative;">
+                    <a><img id="game" class="game-item pos-game-1" onclick="select1(1)" src="./CA/เกม/น้ำมัน.PNG"></a>
+                    <a><img id="game" class="game-item pos-game-2" onclick="select1(2)" src="./CA/เกม/สเปรย์.PNG"></a>
+                    <a><img id="game" class="game-item pos-game-3" onclick="select1(3)" src="./CA/เกม/แมส.PNG"></a>
+                    <a><img id="game" class="game-item pos-game-4" onclick="select1(4)" src="./CA/เกม/หลอดไฟ.PNG"></a>
+                    <a><img id="game" class="game-item pos-game-5" onclick="select1(5)" src="./CA/เกม/ฝา.png"></a>
+                    <a><img id="game" class="game-item pos-game-6" onclick="select1(6)" src="./CA/เกม/ไม้หัก.PNG"></a>
+                </div>
+                <div class="span-1 mob-span-2 flex-left-parent" style="position: relative;">
+                    <a><img id="game2" class="game-item pos-game-12" onclick="select2(1)" src="./CA/เกม/ถุงดำ.PNG"></a>
+                    <a><img id="game2" class="game-item pos-game-10" onclick="select2(2)" src="./CA/เกม/พลาสติก.PNG"></a>
+                    <a><img id="game2" class="game-item pos-game-8" onclick="select2(3)" src="./CA/เกม/ถุงแดง.PNG"></a>
+                    <a><img id="game2" class="game-item pos-game-7" onclick="select2(4)" src="./CA/เกม/กล่อง.PNG"></a>
+                    <a><img id="game2" class="game-item pos-game-11" onclick="select2(5)" src="./CA/เกม/นสพ.PNG"></a>
+                    <a><img id="game2" class="game-item pos-game-9" onclick="select2(6)" src="./CA/เกม/หนังยาง.png"></a>
+                </div>
+            </div>
+        </section>
+        
+</body>
+</html>
