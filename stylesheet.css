@@ -146,7 +146,7 @@ li {
 	padding: 1vw 1vw;
 }
 
-#des-header-big{
+.des-header-big{
 	color: #FD2D2D;
 	font-family: "Kanit", sans-serif;
 	font-size: max(40px , 4vw);
@@ -158,6 +158,21 @@ li {
 	color: #fff8f8;
 	font-family: "Kanit", sans-serif;
 	font-size: max(21px, 1.8vw);
+	margin: 0;
+}
+
+#game-header-big{
+	color: #FD2D2D;
+	font-family: "Kanit", sans-serif;
+	font-size: max(30px , 3vw);
+	margin: 0;
+	font-weight: 600;
+}
+
+#game-para-big{
+	color: #fff8f8;
+	font-family: "Kanit", sans-serif;
+	font-size: max(20px, 2vw);
 	margin: 0;
 }
 
@@ -540,7 +555,7 @@ footer {
 
 .time.active {
 	color: #FF0D0D;
-	transition: 0.2s;
+	transition: 5s;
 }
 
 #dustman {
@@ -555,6 +570,22 @@ footer {
 	display: block;
 	content: "";
 	margin: 5px 0;
+}
+
+.time_stm{
+	opacity: 0;
+}
+
+.time_stm.active{
+	opacity: 100%;
+	transition: 2s;
+	animation: time-transform 2.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes time-transform{
+	from{transform: translateX(8vh);}
+	to{transform: translateX(0vh);}
 }
 
 .item-1,
@@ -759,6 +790,62 @@ img.pos-mock-10{
 	width: 10.5vw; right: 8.5vw; top: 26.5vw;
 }
 
+.tooltiptext{
+	position: absolute;
+	background-color: #FD2D2D;
+	font-weight: 300;
+	padding: 0 5px;
+	font-size: max(14px, 1vw);;
+	text-align: center;
+	visibility: hidden;
+}
+
+.tooltiptext.active{
+	visibility: visible;
+}
+
+.pos-tool-mock1{
+	right: 29.3vw; top: 17vw;
+}
+
+.pos-tool-mock2{
+	right: 20vw; top: 17vw;
+}
+
+.pos-tool-mock3{
+	right: 13.5vw; top: 21vw;
+}
+
+.pos-tool-mock4{
+	right: 31.3vw; top: 26vw;
+}
+
+.pos-tool-mock5{
+	right: 23.7vw; top: 27.5vw;
+}
+
+.pos-tool-mock6{
+	right: 16.5vw; top: 28vw;
+}
+
+.pos-tool-mock7{
+	right: 10vw; top: 27vw;
+}
+
+.pos-tool-mock8{
+	right: 30vw; top: 34vw;
+}
+
+.pos-tool-mock9{
+	right: 20vw; top: 35vw;
+}
+
+.pos-tool-mock10{
+	right: 11.5vw; top: 34vw;
+}
+
+
+
 .circle-nr {
 	/*.circle-nr.active ถ้าใช้เเบบ trigger*/
 	z-index: 0;
@@ -838,13 +925,15 @@ img.pos-mock-10{
 
 .grid-parent>div.span-1,
 .grid-parent>a.span-1,
+.grid-parent-col2>a.span-1,
 .grid-parent-col2>div.span-1 {
 	grid-column: span 1;
 }
 
 .grid-parent>div.span-2,
 .grid-parent-col8>div.span-2,
-.grid-parent-col2>div.span-2 {
+.grid-parent-col2>div.span-2,
+.grid-parent-col2>a.span-2 {
 	grid-column: span 2;
 }
 
@@ -941,6 +1030,10 @@ img.pos-mock-10{
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-name: arrow;
+}
+
+.arrow.down.center{
+	right: 50%;
 }
 
 .arrow.up {
@@ -1197,6 +1290,37 @@ img.pos-mock-10{
 	width: 0;
 	visibility: hidden;
 }
+
+.gamebtn{
+	color: #fff8f8;
+	background-color: #FD2D2D;
+	border-radius: 18px;
+	padding: 10px 15px;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 2.5vh;
+	box-shadow: 2px 5px 5px #1a1919;
+	transition: 0.5s;
+}
+
+.gamebtn2{
+	color: #fff8f8;
+	background-color: #FD2D2D;
+	border-radius: 18px;
+	padding: 10px 15px;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 2.5vh;
+	box-shadow: 2px 5px 5px #1a1919;
+	transition: 0.5s;
+}
+
+.gamebtn:hover, .gamebtn2:hover{
+	box-shadow: none;
+	transition: 0.5s;
+}
 @keyframes arrow {
 	0% {
 		opacity: 1;
@@ -1221,11 +1345,55 @@ img.pos-mock-10{
 .icon{
 	display: none;
 }
+
+/*สำหรับ mac*/
 @media (max-width: 1280px){
 	.heart-sub-containner{
 		padding: 0 15vh; width: 100%;
 	}
+
+	.pos-tool-mock1{
+		right: 29vw; top: 18vw;
+	}
+	
+	.pos-tool-mock2{
+		right: 20vw; top: 18vw;
+	}
+	
+	.pos-tool-mock3{
+		right: 13vw; top: 22vw;
+	}
+	
+	.pos-tool-mock4{
+		right: 31vw; top: 27vw;
+	}
+	
+	.pos-tool-mock5{
+		right: 23.5vw; top: 28vw;
+	}
+	
+	.pos-tool-mock6{
+		right: 16vw; top: 28vw;
+	}
+	
+	.pos-tool-mock7{
+		right: 10vw; top: 27vw;
+	}
+	
+	.pos-tool-mock8{
+		right: 29.7vw; top: 35vw;
+	}
+	
+	.pos-tool-mock9{
+		right: 20vw; top: 36vw;
+	}
+	
+	.pos-tool-mock10{
+		right: 11vw; top: 35vw;
+	}
 }
+
+/*สำหรับ mobile*/
 @media (max-width: 768px) {
 
 	.nav-right a {display: none;}
@@ -1261,10 +1429,23 @@ img.pos-mock-10{
 		justify-content: space-between;
 	}
 
+	.gamebtn{
+		padding: 8px 15px;
+		height: 2vh;
+	}
+
+	.gamebtn2{
+		height: 2vh;
+	}
+
 	body{
 	  --h:190;
 	}
 	/* สร้างสำหรับ Mobile */
+
+	.arrow.down.center{
+		right: 47%;
+	}
 
 	.mob-column-8,
 	.mob-grid-parent-col8 {
@@ -1284,12 +1465,14 @@ img.pos-mock-10{
 	/*   ตัว Grid ลูก */
 	.grid-parent>div.mob-span-1,
 	.grid-parent>a.mob-span-1,
-	.grid-parent-col2>div.mob-span-1 {
+	.grid-parent-col2>div.mob-span-1,
+	.mob-column-2>a.mob-span-1 {
 		grid-column: span 1;
 	}
 	.grid-parent>div.mob-span-2,
 	.grid-parent-col8>div.mob-span-2,
-	.grid-parent-col2>div.mob-span-2 {
+	.grid-parent-col2>div.mob-span-2,
+	.mob-column-2>a.mob-span-2 { 
 		grid-column: span 2;
 	}
 	.grid-parent > div.mob-span-3{

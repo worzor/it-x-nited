@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>สิ่งของอันตรายใกล้ตัว</title>
@@ -64,7 +65,7 @@
 
         <section class="flex-top_down-parent" id="section-main-info">
             <div class="sub-container">
-                <h1 id="des-header-big">ของอันตรายใกล้ตัว</h1>
+                <h1 class="des-header-big">ของอันตรายใกล้ตัว</h1>
                 <p id="des-para-big">ให้เช็คดูตราสัญลักษณ์ที่ระบุไว้ที่ฉลากข้างบรรจุภัณฑ์ ดังนี้</p>
                 <h1 id="des-click" class="click active">ลองคลิกขวดทางด้านขวาดูสิ!</h1>
                 <div id="text-container">
@@ -82,18 +83,30 @@
                     <p id="mock-info-para" style="padding-right: 52vw;"></p>
                 </div>
                     <div class="mock-container">
-                        <a><img id="mock" class="item-danger pos-mock-1" onclick="mockup_click(0)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKระวัง.png"></a>
-                        <a><img id="mock" class="item-danger pos-mock-2" onclick="mockup_click(1)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKกัดกร่อน.png"></a>
-                        <a><img id="mock" class="item-danger pos-mock-3" onclick="mockup_click(2)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKระเบิดได้.png"></a>
-                        <a><img id="mock" class="item-danger pos-mock-4" onclick="mockup_click(3)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKสารพิษ.png"></a>
-                        <a><img id="mock" class="item-danger pos-mock-5" onclick="mockup_click(4)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/ถังสี.png"></a>
-                        <a><img id="mock" class="item-danger pos-mock-6" onclick="mockup_click(5)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKสุขภาพ.png"></a>
-                        <a><img id="mock" class="item-danger pos-mock-7" onclick="mockup_click(6)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/ก๊าซภายใต้ความดัน.png"></a>
-                        <a><img id="mock" class="item-danger pos-mock-8" onclick="mockup_click(7)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKไวไฟ.png"></a>
-                        <a><img id="mock" class="item-danger pos-mock-9" onclick="mockup_click(8)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKติดเชื้อ.png"></a>
-                        <a><img id="mock" class="item-danger pos-mock-10"onclick="mockup_click(9)"  src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKมลพิษ.png"></a>
+                        <a><img id="mock" class="item-danger pos-mock-1" onmouseover="tooltip_active(0)" onmouseout="tooltip_reset()" onclick="mockup_click(0)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKระวัง.png"></a>
+                        <a><img id="mock" class="item-danger pos-mock-2" onmouseover="tooltip_active(1)" onmouseout="tooltip_reset()" onclick="mockup_click(1)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKกัดกร่อน.png"></a>
+                        <a><img id="mock" class="item-danger pos-mock-3" onmouseover="tooltip_active(2)" onmouseout="tooltip_reset()" onclick="mockup_click(2)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKระเบิดได้.png"></a>
+                        <a><img id="mock" class="item-danger pos-mock-4" onmouseover="tooltip_active(3)" onmouseout="tooltip_reset()" onclick="mockup_click(3)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKสารพิษ.png"></a>
+                        <a><img id="mock" class="item-danger pos-mock-5" onmouseover="tooltip_active(4)" onmouseout="tooltip_reset()" onclick="mockup_click(4)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/ถังสี.png"></a>
+                        <a><img id="mock" class="item-danger pos-mock-6" onmouseover="tooltip_active(5)" onmouseout="tooltip_reset()" onclick="mockup_click(5)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKสุขภาพ.png"></a>
+                        <a><img id="mock" class="item-danger pos-mock-7" onmouseover="tooltip_active(6)" onmouseout="tooltip_reset()" onclick="mockup_click(6)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/ก๊าซภายใต้ความดัน.png"></a>
+                        <a><img id="mock" class="item-danger pos-mock-8" onmouseover="tooltip_active(7)" onmouseout="tooltip_reset()" onclick="mockup_click(7)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKไวไฟ.png"></a>
+                        <a><img id="mock" class="item-danger pos-mock-9" onmouseover="tooltip_active(8)" onmouseout="tooltip_reset()" onclick="mockup_click(8)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKติดเชื้อ.png"></a>
+                        <a><img id="mock" class="item-danger pos-mock-10"onmouseover="tooltip_active(9)" onmouseout="tooltip_reset()" onclick="mockup_click(9)"  src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKมลพิษ.png"></a>
                     </div>
+                        <p id="tooltxt" class="tooltiptext pos-tool-mock1">ระวัง</p>
+                        <p id="tooltxt" class="tooltiptext pos-tool-mock2">สารกัดกร่อน</p>
+                        <p id="tooltxt" class="tooltiptext pos-tool-mock3">ระเบิดได้</p>
+                        <p id="tooltxt" class="tooltiptext pos-tool-mock4">สารพิษ</p>
+                        <p id="tooltxt" class="tooltiptext pos-tool-mock5">ออกซิไดซ์</p>
+                        <p id="tooltxt" class="tooltiptext pos-tool-mock6">อันตราย<br>ต่อสุขภาพ</p>
+                        <p id="tooltxt" class="tooltiptext pos-tool-mock7">ก๊าซภายใต้<br>ความดัน</p>
+                        <p id="tooltxt" class="tooltiptext pos-tool-mock8">สารไวไฟ</p>
+                        <p id="tooltxt" class="tooltiptext pos-tool-mock9">สารติดเชื้อ</p>
+                        <p id="tooltxt" class="tooltiptext pos-tool-mock10">อันตรายต่อ<br>สิ่งเเวดล้อม</p>
+                    
             </div>
+            <a class="arrow down center" href="#section-nm-1"></a>
         </section>
 
         <section id="section-nm-1" style="margin-bottom: 20vw;">
@@ -103,8 +116,8 @@
                 </div>
                 <div class="span-1 flex-left-parent">
                     <div>
-                        <h1 id="des-header-big">จะเป็นอะไรไหม?</h1>
-                        <h1 style="margin: 0;">ถ้าหากอยู่กับสารพิษเหล่านี้เป็นเวลานาน</h1>
+                        <h1 id="description" class="description des-header-big">จะเป็นอะไรไหม?</h1>
+                        <h1 id="description" class="sub-description" style="margin: 0;">ถ้าหากอยู่กับสารพิษเหล่านี้เป็นเวลานาน</h1>
                     </div>
                 </div>
             </div>
@@ -119,14 +132,14 @@
                 <div class="span-1 flex-center-parent2" style="position: relative;">
                     <div class="des-long-container">
                         <div class="long-des">
-                            <h1>ผลต่อ<span id="highlight">ตา</span></h1>
-                            <p>เกิดอาการระคายเคือง แสบตา เยื่อยุตาอักเสบ <br>
+                            <h1 id="description" class="description" >ผลต่อ<span id="highlight">ตา</span></h1>
+                            <p id="description" class="sub-description">เกิดอาการระคายเคือง แสบตา เยื่อยุตาอักเสบ <br>
                                 ตาพร่ามัว น้ำตาไหลและอาจตาบอดได้ถ้ารับ <br>
                                 สารในปริมาณมาก เช่น เมธานอล <br></p>
                         </div>
                         <div class="long-des">
-                            <h1>ผลต่อ<span id="highlight">ระบบทางเดินหายใจ</span></h1>
-                            <p>ระบบทางเดินหายใจซึ่งเป็นทางผ่านของ <br>
+                            <h1 id="description" class="description" >ผลต่อ<span id="highlight">ระบบทางเดินหายใจ</span></h1>
+                            <p id="description" class="sub-description">ระบบทางเดินหายใจซึ่งเป็นทางผ่านของ <br>
                                 ก๊าซไอระเหย ฝุ่นละอองของสารพิษ <br>
                                 ทำให้เกิดความระคายเคืองต่อระบบทางเดิน <br>
                                 หายใจในส่วนต้น ทำลายเนื้อเยื่อปอด ทำลายความยืดหยุ่นปอด <br>
@@ -134,17 +147,19 @@
                                 ซ้ำ ๆ เป็นเวลานาน เช่น มะเร็งปอด มะเร็งโพรงจมูก เป็นต้น </p>
                         </div>
                         <div class="long-des">
-                            <h1>ผลต่อ<span id="highlight">ผิวหนัง</span></h1>
-                            <p>เกิดการระคายเคืองขั้นต้น เกิดการแพ้แสง <br>
+                            <h1 id="description" class="description">ผลต่อ<span id="highlight">ผิวหนัง</span></h1>
+                            <p id="description" class="sub-description">เกิดการระคายเคืองขั้นต้น เกิดการแพ้แสง <br>
                                 ทำลายผิวหนังอย่างถาวร เกิดมะเร็งผิวหนัง </p> 
                         </div>
                         <div class="long-des">
-                            <h1>ผลต่อ<span id="highlight">อวัยวะภายใน</span></h1>
-                            <p>ตับ : แบบเฉียบพลัน (เซลล์ตาย) แบบเรื้อรัง (ตับแข็ง มะเร็ง)<br> สารที่เป็นพิษต่อตับ เช่น คาร์บอนเตตระคลอไรด์ คลอโรฟอร์ม</p> 
-                            <p>ไต : สารที่เป็นพิษต่อไต เช่น โลหะหนัก คาร์บอนไดซัลไฟด์</p>
-                            <p>เลือด : กระทบต่อระบบการการสร้างเม็ดเลือด (ไขกระดูก) <br>องค์ประกอบของเลือด (เกล็ดเลือด เม็ดเลือดแดง เม็ดเลือดขาว) <br>หรือความสามารถในการขนส่งออกซิเจน<br>ของเซลล์เม็ดเลือด สารที่เป็นพิษต่อเลือด เช่น เบนซิน กัมมันตรังสี</p>
-                            <p>ม้าม : สารที่เป็นพิษต่อม้าม เช่น คลอโรฟีน ไนโตรเบนซิน</p>
-                            <p>ระบบสืบพันธ์ุ : เป็นหมัน อสุจิผิดปกติ มีอสุจิน้อย <br> ระบบฮอร์โมนทำงานผิดปกติ สารที่เป็นพิษต่อระบบสืบพันธ์ เช่น <br> โลหะหนักไดออกซิน</p>
+                            <h1 id="description" class="description">ผลต่อ<span id="highlight">อวัยวะภายใน</span></h1>
+                            <div id="description" class="sub-description">
+                                <p>ตับ : แบบเฉียบพลัน (เซลล์ตาย) แบบเรื้อรัง (ตับแข็ง มะเร็ง)<br> สารที่เป็นพิษต่อตับ เช่น คาร์บอนเตตระคลอไรด์ คลอโรฟอร์ม</p> 
+                                <p>ไต : สารที่เป็นพิษต่อไต เช่น โลหะหนัก คาร์บอนไดซัลไฟด์</p>
+                                <p>เลือด : กระทบต่อระบบการการสร้างเม็ดเลือด (ไขกระดูก) <br>องค์ประกอบของเลือด (เกล็ดเลือด เม็ดเลือดแดง เม็ดเลือดขาว) <br>หรือความสามารถในการขนส่งออกซิเจน<br>ของเซลล์เม็ดเลือด สารที่เป็นพิษต่อเลือด เช่น เบนซิน กัมมันตรังสี</p>
+                                <p>ม้าม : สารที่เป็นพิษต่อม้าม เช่น คลอโรฟีน ไนโตรเบนซิน</p>
+                                <p>ระบบสืบพันธ์ุ : เป็นหมัน อสุจิผิดปกติ มีอสุจิน้อย <br> ระบบฮอร์โมนทำงานผิดปกติ สารที่เป็นพิษต่อระบบสืบพันธ์ เช่น <br> โลหะหนักไดออกซิน</p>
+                            </div>
                         </div>
                     </div>
                 </div>

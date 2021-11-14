@@ -9,7 +9,6 @@ function onscrollFunction(page) {
     if(page == 1){
         var sec_1H = document.getElementById("section-nm-1").getBoundingClientRect().y;
         var sec_2H = document.getElementById("section-nm-1-2").getBoundingClientRect().y;
-        console.log(((sec_1H - winH/3) * -1) * 0.005)
         if(sec_1H - winH/1.5 < 0 && sec_1H + winH/2 - winH/2 > 0){ /*เทียบความสูง ระหว่างของบน เเละ ขอบล่าง ของ section 1 เเละ 2*/
             if(((sec_1H - winH/3) * -1) * 0.005 > 0){
                 document.body.style.setProperty("--scale", ((sec_1H - winH/3) * -1) * 0.0035);
@@ -34,6 +33,7 @@ function trigger_AllBar(){ /*Function ใหญ่ที่จะ Trigger ทุ
     }for(let d of All_des){
         trigger_des(d);
     }
+    trigger_timestm();
 }
 
 function trigger_Bar(el){ /*Function ย่อยสำหรับ Trigger ตัวของ Highlight*/
@@ -54,6 +54,19 @@ function trigger_des(el){
     let this_des = el.getBoundingClientRect().y - window.innerHeight;
     if(this_des < 0){
         el.classList.add("active");
+    }
+}
+
+function trigger_timestm(){
+    let time = document.querySelector("#time_stm");
+    let sub_time = document.querySelectorAll("#time_trig");
+    let timestm = time.getBoundingClientRect().y - (window.innerHeight/2);
+    
+    if((timestm - (winH / 2)) < 0){
+        time.classList.add("active");
+        for(t in sub_time){
+            sub_time[t].classList.add("active");
+        }
     }
 }
 
@@ -142,6 +155,18 @@ function loading_Function() {
 function showPage() {
     document.getElementById("loading-sc").style.display = "none";
     document.getElementById("site-body").style.display = "block";
+}
+
+function tooltip_active(tools){
+    let tool_All = document.querySelectorAll("#tooltxt");
+    tool_All[tools].classList.add("active");
+}
+
+function tooltip_reset(){
+    let tool_All = document.querySelectorAll("#tooltxt");
+    for(i in tool_All){
+        tool_All[i].classList.remove("active")
+    }
 }
 
 /*var head_id = ""

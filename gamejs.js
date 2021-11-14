@@ -40,18 +40,23 @@ function gameResultCheck(){
             item2 = 0;
             success_counter++;
             console.log(success_counter);
+            if(success_counter == 6){
+                window.location.replace("game_pass.html");
+            }
         }
         else{
             console.log("not correct!");
             if(fail_counter == 0){
                 heartAll[2].classList.remove("active");
-                fail_counter++;
             }else if(fail_counter == 1){
                 heartAll[1].classList.remove("active");
-                fail_counter++;
             }
+            fail_counter++;
             item1 = 0;
             item2 = 0;
+            if(fail_counter == 3){
+                window.location.replace("game_fail.html");
+            }
             reset();
         }
     }
