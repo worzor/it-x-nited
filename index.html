@@ -15,8 +15,9 @@
     <link rel="icon" href="./CA/รูปหน้าhome/โลโก้เล็ก.png">
     <link rel="stylesheet" href="./stylesheet.css">
     <script src="./jsscript.js"></script>
+    <script src="./mainpage.js"></script>
     
-<body onscroll="onscrollFunction(1)" onload="" id="body">
+<body onscroll="onscrollFunction(1)" onload="" id="body" onmousemove="onmove()">
     <header>
         <div class="header normal">
             <div class="nav-left">
@@ -36,14 +37,14 @@
         <div class="logo">
             <img id="logo" src="./CA/รูปหน้าhome/โลโก้หลัก.png" alt="logo">
         </div>
-        <div id="section-main" class="section-main">
-            <img class="img-fit" src="./CA/รูปหน้าhome/หน้าหลัก.png" alt="main-logo">
+        <div id="section-main" class="section-main parallax">
+            <img class="img-fit mob-main-img" src="./CA/รูปหน้าhome/หน้าหลัก.png" alt="main-logo">
             <a class="arrow down" href="#section-nm-1"></a>
         </div>
 
         <section id="section-nm-1">
             <div class="grid-parent-col2 mob-grid-parent-col2" >
-                <div class="span-1 mob-span-2 flex-left-parent sec1">
+                <div class="span-1 mob-span-2 flex-left-parent sec1 mob-flex-center-parent">
                     <img id="item" class="item-1" src="./CA/รูปหน้าhome/หลอด-resize.PNG" alt="light">
                     <div id="circle" class="circle-nr pos-item-1"></div>
                     <img id="item" class="item-2" src="./CA/รูปหน้าhome/ฝา-resize.PNG" alt="lid">
@@ -55,12 +56,12 @@
                 <div class="span-1 mob-span-2 flex-left-parent">
                     <div class="sec-description">
                         <h1 id="description" class="description"><span id="highlight">ขยะอันตราย</span>คืออะไร?</h1>
-                        <p id="description" class="sub-description">ขยะอันตราย คือ ขยะติดเชื้อที่มีสารคัดหลั่งต่าง ๆ <br>
-                            ขยะที่มีพิษ วัสดุที่ไม่ใช้แล้ว ผลิตภัณฑ์เสื่อมสภาพ <br>
-                            ขยะที่เป็นอันตรายต่อสุขภาพ หรือภาชนะบรรจุต่าง ๆ <br>
-                            ที่มีองค์ประกอบหรือปนเปื้อนวัตถุสารอันตรายที่มีลักษณะ<br>
-                            เป็น สารพิษ สารไวไฟ สารเคมีที่กัดกร่อนได้ <br>
-                            สารกัมมันตรังสีและสารที่ทำให้เกิดโรครวมถึงของมีคม <br>
+                        <p id="description" class="sub-description">ขยะอันตราย คือ ขยะติดเชื้อที่มีสารคัดหลั่งต่าง ๆ
+                            ขยะที่มีพิษ วัสดุที่ไม่ใช้แล้ว ผลิตภัณฑ์เสื่อมสภาพ
+                            ขยะที่เป็นอันตรายต่อสุขภาพ หรือภาชนะบรรจุต่าง ๆ
+                            ที่มีองค์ประกอบหรือปนเปื้อนวัตถุสารอันตรายที่มีลักษณะ
+                            เป็น สารพิษ สารไวไฟ สารเคมีที่กัดกร่อนได้ 
+                            สารกัมมันตรังสีและสารที่ทำให้เกิดโรครวมถึงของมีคม 
                             ต่าง ๆ ที่ไม่ใช้แล้ว </p>
                     </div>
                 </div>
@@ -68,25 +69,25 @@
         </section>
 
         <section id="section-nm-1-2">
-            <div class="grid-parent-col2">
-                <div class="span-1 flex-right-parent">
-                    <div class="sec-description" style="padding: 0px 7vw 0px 4vw;">
-                        <p id="description" class="sub-description">ปฏิเสธไม่ได้เลยว่าเราไม่เคยสร้างขยะอันตรายให้ <br>
-                            กับโลกใบนี้ ยิ่งเป็นโลกในยุคดิจิตอลทั้งจากพฤติกรรม<br> ต่าง ๆ ที่เกิดขึ้นในชีวิตประจำวัน</p>
+            <div class="grid-parent-col2 mob-grid-parent-col2">
+                <div class="span-1 flex-right-parent mob-span-2">
+                    <div class="sec-description">
+                        <p id="description" class="sub-description des-left">ปฏิเสธไม่ได้เลยว่าเราไม่เคยสร้างขยะอันตรายให้
+                            กับโลกใบนี้ ยิ่งเป็นโลกในยุคดิจิตอลทั้งจากพฤติกรรมต่าง ๆ ที่เกิดขึ้นในชีวิตประจำวัน</p>
                     </div>
                 </div>
-                <div class="span-1 flex-right-parent sec2">
+                <div class="span-1 flex-right-parent sec2 mob-span-2 mob-flex-center-parent">
                     <img id="item" class="item-4" src="./CA/รูปหน้าhome/สเปรย์-resize.PNG" alt="spray-can">
                     <div id="circle" class="circle-nr pos-item-4"></div>
                     <img id="item" class="item-5" src="./CA/รูปหน้าhome/ขวดน้ำมัน-resize.PNG" alt="oil-bottle">
                     <div id="circle" class="circle-sm pos-item-5"></div>
-                    <img class="img-big" src="./CA/รูปหน้าhome/กองขวด.PNG" alt="garbage-1">
+                    <img class="img-big bottle" src="./CA/รูปหน้าhome/กองขวด.PNG" alt="garbage-1">
                 </div>
             </div>
         </section>
 
         <section id="section-nm-2">
-            <div class="flex-center-parent txt-fit">
+            <div class="flex-center-parent txt-fit sub-des-top">
                 <p id="description" class="sub-description">เราต่างเป็นทั้งผู้ที่สร้างขยะ และทิ้งขยะเหล่านั้น <br>
                     แต่เคยคิดบ้างไหมว่า ขยะที่เราปล่อยทิ้งลงไปทุกวันนี้ <br>
                     อาจก่อให้เกิดอันตรายต่อพนักงานเก็บขยะในอนาคตได้</p>

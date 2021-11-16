@@ -449,11 +449,20 @@ footer {
 	animation-fill-mode: forwards;
 }
 
+.sub-description{
+	padding-right: 18vw;
+}
+
 .sub-description.active{
 	opacity: 100%;
 	transition: 2s;
 	animation: des-transform 2.5s;
 	animation-fill-mode: forwards;
+}
+
+.des-left{
+	padding-right: 0;
+	padding-left: 18vw;
 }
 
 @keyframes des-transform {
@@ -1346,6 +1355,22 @@ img.pos-mock-10{
 	display: none;
 }
 
+.mob-main-img{
+	visibility: hidden;
+}
+
+.parallax{
+	visibility: visible;
+	width: 100%;
+	position: relative;
+	background-size: 102% 100%;
+	background-image: url(./CA/รูปหน้าhome/หน้าหลัก-กองแรก.png), url(./CA/รูปหน้าhome/หน้าหลัก-กองกลาง.png),url(./CA/รูปหน้าhome/หน้าหลัก-กองหลัง.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-position: 50% 50%;
+	z-index: -20;
+}
+
 /*สำหรับ mac*/
 @media (max-width: 1280px){
 	.heart-sub-containner{
@@ -1395,7 +1420,16 @@ img.pos-mock-10{
 
 /*สำหรับ mobile*/
 @media (max-width: 768px) {
-
+	#logo{
+		width: 323px;
+		height: 109px;
+	}
+	.mob-main-img{
+		visibility: visible;
+	}
+	.parallax{
+		visibility: hidden;
+	}
 	.nav-right a {display: none;}
 	.nav-right .icon{
 		float: right;
@@ -1441,10 +1475,112 @@ img.pos-mock-10{
 	body{
 	  --h:190;
 	}
+	
+	.flex-left-parent{
+		align-items: start;
+	}
+
+	.sub-des-top{
+		display: flex;
+		justify-content: center;
+		align-items: start;
+	}
+
+	.flex-right-parent{
+		align-items: end;
+	}
+
+	section h1{
+		font-size: max(25px, 2.1vw);
+	}
+
+	section p{
+		font-size: max(17px);
+	}
+
+	.sub-description{
+		padding-right: 0;
+		padding-left: 0;
+	}
+	#section-nm-1-2{
+		height: 60vh;
+	}
+	#section-nm-2{
+		height: 50vh;
+	}
+	/*หน้าเเรก*/
+	.img-nr{
+		width: 75%;
+	}
+
+	.circle-nr{
+		width: 140px;
+		height: 140px;
+	}
+	.circle-sm{
+		width: 115px;
+		height: 115px;
+	}
+
+	.item-1{
+		left: 16.5vh;
+		padding: 20px;
+		width: 100px;
+	}
+	.item-2{
+		bottom: 59vh;
+		padding: 25px;
+		width: 63px;
+	}
+	.item-3{
+		bottom: 51vh;
+		left: 56vw;
+		padding: 20px;
+		width: 100px;
+	}
+	.item-4{
+		top: 30vh;
+		right: 8vw;
+		width: 100px;
+	}
+	.item-5{
+		bottom: 5vh;
+		right: 65vw;
+		padding: 18px;
+		width: 79px;
+	}
+	.pos-item-1{
+		left: 16.5vh;
+	}
+	.pos-item-2{
+		bottom: 59vh;
+	}
+	.pos-item-3{
+		bottom: 51vh;
+		left: 56vw;
+	}
+	.pos-item-4{
+		top: 30vh;
+		right: 8vw;
+	}
+	.pos-item-5{
+		bottom: 5vh;
+		right: 65vw;
+	}
+	.bottle{
+		object-fit: cover;
+		width: 90%;
+	}
 	/* สร้างสำหรับ Mobile */
 
 	.arrow.down.center{
 		right: 47%;
+	}
+
+	.mob-flex-center-parent{
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.mob-column-8,
