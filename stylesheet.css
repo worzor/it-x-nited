@@ -16,6 +16,9 @@
 a{
 	cursor: pointer;
 }
+.pause {
+    animation-play-state: paused;
+}
 /*Font*/
 section h1,
 section p {
@@ -449,7 +452,7 @@ footer {
 	animation-fill-mode: forwards;
 }
 
-.sub-description{
+.des-right{
 	padding-right: 18vw;
 }
 
@@ -463,6 +466,10 @@ footer {
 .des-left{
 	padding-right: 0;
 	padding-left: 18vw;
+}
+
+.sec-des-center{
+	padding: 0 32vw;
 }
 
 @keyframes des-transform {
@@ -806,8 +813,8 @@ img.pos-mock-10{
 	padding: 0 5px;
 	font-size: max(14px, 1vw);;
 	text-align: center;
-	visibility: hidden;
-}
+	visibility: hidden; transform: rotate();
+} 
 
 .tooltiptext.active{
 	visibility: visible;
@@ -853,7 +860,37 @@ img.pos-mock-10{
 	right: 11.5vw; top: 34vw;
 }
 
+.pos-tool-thing1{
+	right: 22.5vw; top: 15vw;
+}
 
+.pos-tool-thing2{
+	right: 12vw; top: 15vw;
+}
+
+.pos-tool-thing3{
+	right: 26.5vw; top: 25vw;
+}
+
+.pos-tool-thing4{
+	right: 17.8vw; top: 25vw;
+}
+
+.pos-tool-thing5{
+	right: 7.5vw; top: 25vw;
+}
+
+.pos-tool-thing6{
+	right: 27vw; top: 35vw;
+}
+
+.pos-tool-thing7{
+	right: 19.5vw; top: 35vw;
+}
+
+.pos-tool-thing8{
+	right: 11.5vw; top: 35vw;
+}
 
 .circle-nr {
 	/*.circle-nr.active ถ้าใช้เเบบ trigger*/
@@ -998,6 +1035,34 @@ img.pos-mock-10{
 
 
 /*Arrow*/
+
+.pos-arrowD-main{
+	position: absolute;
+	top: 87vh;
+	right: 11vw;
+	z-index: 100;
+}
+
+.arrow-down{
+	cursor: pointer;
+	animation: arrowDownOut 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.arrow-down:hover{
+	animation: arrowDownIn 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes arrowDownIn {
+	0%{transform: translateY(0px);}
+	100%{transform: translateY(15px);}
+}
+
+@keyframes arrowDownOut {
+	0%{transform: translateY(15px);}
+	100%{transform: translateY(0px);}
+}
 
 .arrow.down,
 .arrow.down:before,
@@ -1486,6 +1551,12 @@ img.pos-mock-10{
 		align-items: start;
 	}
 
+	.des-top{
+		left: 0;
+	}
+	.person-pic-1{
+		padding: 0 40vw 0 12vw;
+	}
 	.flex-right-parent{
 		align-items: end;
 	}
@@ -1506,7 +1577,11 @@ img.pos-mock-10{
 		height: 60vh;
 	}
 	#section-nm-2{
-		height: 50vh;
+		height: 30vh;
+	}
+	#section-nm-3{
+		height: 60vh;
+		margin-bottom: 20vh;
 	}
 	/*หน้าเเรก*/
 	.img-nr{
