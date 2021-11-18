@@ -18,6 +18,7 @@ function onscrollFunction(page) {
                 document.body.style.setProperty("--scale_2", ((sec_2H - winH/3) * -1) * 0.0035);
             }
         }
+        gif_trigger();
     }
     trigger_AllBar();
 };
@@ -70,6 +71,18 @@ function trigger_timestm(){
     }
 }
 
+function gif_trigger(){
+    let gif = document.getElementById("element-gif");
+    let gify = gif.getBoundingClientRect().y - (window.innerHeight/2);
+
+    if((gify - (winH / 2)) < 0){
+        gif.classList.add("active");
+        setTimeout(function() {
+            document.getElementById("element-gif").src = "./CA/รูปหน้าhome/กองขยะ stop0.png"
+          }, 2800);
+    }
+}
+
 function mockup_click(el_mock){ /*Function หลักที่ใช้ควบคุมการเเสดงผลของ mock info*/
     document.querySelector("#des-click").classList.remove("active")
     document.querySelector("#text-container").classList.add("fade-in-text");
@@ -94,6 +107,30 @@ function mock_infoShow(el_mock){ /*Function สำหรับเเสดงข
     }if(el_mock == 1){
         document.querySelector("#mock-info-header").innerText = "สารกัดกร่อน";
         document.querySelector("#mock-info-para").innerText = "สารที่มีปฏิกิริยาเคมีจะก่อให้เกิดความเสียหายต่อเนื้อเยื่อของสิ่งมีชีวิตและกัดกร่อนอุปกรณ์ไอระเหยเกิดการระคายเคืองต่อจมูกและตา เช่น ภาชนะบรรจุน้ํากรดในแบตเตอรี่รถยนต์ หรือภาชนะบรรจุน้ํายาทําความสะอาด";
+    }if(el_mock == 2){
+        document.querySelector("#mock-info-header").innerText = "ระเบิดได้";
+        document.querySelector("#mock-info-para").innerText = "สารเคมีที่ก่อให้เกิดการระเบิดเมื่อได้รับความร้อน เเสง ความเร่ง หรือการเสียดสีเช่น ระเบิดทีเอ็นที ดินปืน พลุไฟ ดอกไม้ไฟ หรือสารก่อประกายไฟต่าง ๆ";
+    }if(el_mock == 3){
+        document.querySelector("#mock-info-header").innerText = "สารพิษ";
+        document.querySelector("#mock-info-para").innerText = "สารเคมีที่ก่อให้เกิดอันตรายต่อสิ่งมีชีวิต และสิ่งแวดล้อม เช่น น้ำยาล้างห้องน้ำ สารฆ่าเเมลง สารปรอทในหลอดฟลูออเรสเซนต์";
+    }if(el_mock == 4){
+        document.querySelector("#mock-info-header").innerText = "สารออกซิไดซ์";
+        document.querySelector("#mock-info-para").innerText = "สารช่วยทำให้เกิดเพลิงไหม้ การระเบิดเมื่อสัมผัสกับวัตถุที่ไหม้ไฟ และจะทำให้อัตราในการลุกไหม้เพิ่มขึ้น หรือทำให้เกิดการระเบิดเมื่อได้รับความร้อน การสั่นสะเทือน หรือแรงเสียดทาน เช่น สารคลอรีนที่ใช้ฆ่าเชื้อในสระว่ายน้ำ";
+    }if(el_mock == 5){
+        document.querySelector("#mock-info-header").innerText = "เป็นอันตรายต่อสุขภาพ";
+        document.querySelector("#mock-info-para").innerText = "สารก่อมะเร็ง อาการแพ้ต่อระบบทางเดินหายใจ ความเป็นพิษต่อระบบสืบพันธุ์ก่อให้เกิดการกลายพันธุ์ของเซลล์สืบพันธุ์";
+    }if(el_mock == 6){
+        document.querySelector("#mock-info-header").innerText = "ก๊าซภายใต้ความดัน";
+        document.querySelector("#mock-info-para").innerText = "เป็นสารที่จะระเบิดเมื่อได้รับความร้อน เช่น ภาชนะฉีดพ่น แก๊ซกระป๋อง ที่ประกอบไปด้วย ก๊าซอัด หรือก๊าซเหลว ไม่ควรใช้กับคอนโดสูง เพราะอาจเกิดแรงดันและระเบิดได้  ";
+    }if(el_mock == 7){
+        document.querySelector("#mock-info-header").innerText = "ช่วยให้ไฟลุก";
+        document.querySelector("#mock-info-para").innerText = "สารเคมีที่ติดไฟได้เมื่อระเหยเป็นไอไปสัมผัสกับอากาศ และสัมผัสกับแหล่งจุดติดไฟ อาจอยู่ในรูปของ ของแข็ง ของเหลว ไอ หรือ ก๊าซ เช่น น้ำมันก๊าด น้ำยาล้างเล็บ น้ำยาลบคำผิด ทินเนอร์ กระป๋องสเปรย์";
+    }if(el_mock == 8){
+        document.querySelector("#mock-info-header").innerText = "สารติดเชื้อ";
+        document.querySelector("#mock-info-para").innerText = "สารที่มีเชื้อโรคปนเปื้อน หรือสารที่มีพยาธิปนเปื้อนที่เป็นสาเหตุของการเกิดโรคในสัตว์และคน เช่น หน้ากากอนามัย เข็มฉีดยา ผ้าอนามัย ปรอทวัดไข้";
+    }if(el_mock == 9){
+        document.querySelector("#mock-info-header").innerText = "เป็นอันตรายต่อสิ่งแวดล้อม";
+        document.querySelector("#mock-info-para").innerText = "เป็นอันตรายต่อสิ่งแวดล้อมในน้ำ ทั้งเฉียบพลันและเรื้อรัง เช่น หลอดฟลูออเรสเซนต์ ขวดยา ถ่านไฟฉาย กระป๋องสีสเปรย์ กระป๋อง ยาฆ่าแมลง ภาชนะบรรจุสารอันตรายต่าง ๆ";
     }
     mytime = setTimeout(del_fede, 300);
 }
@@ -125,14 +162,33 @@ function things_click(el_thing){ /*Function หลักที่ใช้คว
 }
 
 function things_infoShow(el_thing){ /*Function สำหรับเเสดงข้อความในหน้า วิธีการป้องกัน info*/
+    document.querySelector("#mock-info-header").innerText = "";
+    document.querySelector("#mock-info-para").innerText = "";
     document.querySelector("#mock-info-header2").innerText = "";
     document.querySelector("#mock-info-para2").innerText = "";
     if(el_thing == 0){
-        document.querySelector("#mock-info-header").innerText = "สารที่ต้องระวัง";
-        document.querySelector("#mock-info-para").innerText = "สารที่มีพิษเฉียบพลัน อันตรายเมื่อสัมผัสกับผิวหนัง และดวงตา มีผลต่อทางเดินหายใจ ควรใช้ในที่อากาศถ่ายเท เช่น สีสเปรย์ สารปรอทในเครื่องสำอาง";
+        document.querySelector("#mock-info-header").innerText = "กระป๋องสเปรย์";
+        document.querySelector("#mock-info-para").innerText = "นำแก๊สกระป๋องและกระป๋องสเปรย์ ที่ยังเหลือไส้ในอยู่ ใส่ลงในถุง พลาสติกโปร่งใส ห้ามใส่ลงในถุงขยะเฉพาะ วางในจุดทิ้งขยะโดยห่างจากขยะอื่น ๆ กรณีที่จะนำไปทิ้งที่อื่น ต้องทิ้งที่สถานที่กำจัดขยะ ของที่มีเชื้อเพลิง คอยระมัดระวังและหลีกเลี่ยงให้อยู่ไกลไฟ";
     }if(el_thing == 1){
-        document.querySelector("#mock-info-header").innerText = "สารกัดกร่อน";
-        document.querySelector("#mock-info-para").innerText = "สารที่มีปฏิกิริยาเคมีจะก่อให้เกิดความเสียหายต่อเนื้อเยื่อของสิ่งมีชีวิตและกัดกร่อนอุปกรณ์ไอระเหยเกิดการระคายเคืองต่อจมูกและตา เช่น ภาชนะบรรจุน้ํากรดในแบตเตอรี่รถยนต์ หรือภาชนะบรรจุน้ํายาทําความสะอาด";
+        document.querySelector("#mock-info-header").innerText = "ขวดน้ำมันเครื่อง น้ำยาทำความสะอาด น้ำยาทาเล็บ ทินเนอร์ น้ำยาลบคำผิด";
+        document.querySelector("#mock-info-para").innerText = "ให้ปิดฝาให้สนิท ห้ามนำของเหลวข้างในขวดมาเทรวมกัน เก็บในภาชนะที่ไม่รั่วซึม รวบรวมขวดไว้ในถุงพลาสติก ทำเครื่องหมายให้ชัดเจน แล้วนำไปทิ้งในถังขยะอันตราย ตอนเก็บควรระมัดระวัง เก็บไว้ในที่ร่ม และหลีกเลี่ยงให้อยู่ไกลไฟ";
+    }if(el_thing == 2){
+        document.querySelector("#mock-info-header").innerText = "ยาน้ำ";
+        document.querySelector("#mock-info-para").innerText = "ทำลายฉลากยาด้านหน้า แล้วเติมเกลือ แป้ง ผงถ่าน หรือผงเครื่องเทศที่ไม่เป็นพิษ เช่น ขมิ้นหรือมัสตาร์ด ใส่ลงไปในยา เพื่อทำให้ยาน้ำดูไม่น่าดื่มสำหรับทั้งคนหรือสัตว์ จากนั้นนำไปทิ้งในถังขยะรีไซเคิล ควรระมัดระวังและหลีกเลี่ยงให้อยู่ไกลไฟ";
+        document.querySelector("#mock-info-header2").innerText = "ยาเม็ด";
+        document.querySelector("#mock-info-para2").innerText = "เอายาที่หมดอายุ หรือไม่ต้องการออกจากบรรจุเดิม";
+    }if(el_thing == 3){
+        document.querySelector("#mock-info-header").innerText = "หลอดไฟ สตาร์ทเตอร์";
+        document.querySelector("#mock-info-para").innerText = "นำไปทิ้งในถังขยะอันตรายโดยต้องแยกออกจากขยะอื่น ๆ ให้ชัดเจน เช่น แยกใส่กล่องไว้เพื่อป้องกันอันตรายหากหลอดไฟเกิดแตกสร้างความเสียหายต่อพนักงานเก็บขยะ และการปนเปื้อนสู่สิ่งแวดล้อม ควรระมัดระวัง และหลีกเลี่ยงให้อยู่ไกลไฟ";
+    }if(el_thing == 4){
+        document.querySelector("#mock-info-header").innerText = "ขยะอิเล็กทรอนิกส์ ถ่าน แบตเตอร์รี่มือถือ";
+        document.querySelector("#mock-info-para").innerText = "เก็บรวมรวมถ่านเก่าใส่ไว้ในถุงดำ แล้วติดป้ายว่าขยะพิษ เพื่อแจ้งให้พนักงานเก็บขยะทราบ หรือหากมีซากถ่านไฟฉายเป็นจำนวนมากสามารถแจ้งเรียกฝ่ายความสะอาดของเขตที่พักอาศัยไปรับถึงที่ได้ ตอนเก็บควรระมัดระวัง และหลีกเลี่ยงให้อยู่ไกลไฟ";
+    }if(el_thing == 5){
+        document.querySelector("#mock-info-header2").innerText = "ขยะติดเชื้อ แมส ผ้าอนามัย กระดาษชำระ ถุงยางอนามัย";
+        document.querySelector("#mock-info-para2").innerText = "เก็บรวบรวมขยะติดเชื้อทิ้งขยะในถุงพลาสติก 2 ชั้น โดยใช้ถุงแดงหรือเขียนข้อความ “ขยะติดเชื้อ” ให้เห็นชัดเจน มัดปากถุงให้แน่นเคลื่อนย้ายขยะไปยังจุดรับทิ้งขยะติดเชื้อที่จัดไว้โดยเฉพาะ";
+    }if(el_thing == 6){
+        document.querySelector("#mock-info-header").innerText = "ปรอทวัดไข้";
+        document.querySelector("#mock-info-para").innerText = "หากตัวปรอทเกิดความเสียหาย เช่น แตก หรือมีรอยร้าว ให้นำตัวปรอทมา ผสมกับปูนซีเมนต์แล้วเทลงในกระป๋องพลาสติกขนาดเล็กแล้วนำไปทิ้งในถังขยะอันตราย แต่หากตัวปรอทไม่มีความเสียหาย ให้เก็บแยกไว้ให้มิดชิดแล้วนำไปทิ้งในถังขยะอันตราย";
     }if(el_thing == 7){
         document.querySelector("#mock-info-header").innerText = "ของมีคม ใบมีด ฝากระป๋อง เข็มเย็บผ้า";
         document.querySelector("#mock-info-para").innerText = "ให้นำกระดาษหนังสือพิมพ์มาห่อเเละใส่ถุงไว้พร้อมเขียนระบุให้กับพนักงานเก็บขยะ";

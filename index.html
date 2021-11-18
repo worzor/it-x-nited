@@ -37,15 +37,18 @@
         <div class="logo">
             <img id="logo" src="./CA/รูปหน้าhome/โลโก้หลัก.png" alt="logo">
         </div>
-        <div class="pos-arrowD-main arrow-down">
-            <a href="#section-nm-1"><img src="./img/chevron-down.svg" class="pos-mainpage"></a>
+        <div class="pos-arrowD-main arrow down">
+            <a href="#section-nm-1"><img src="./img/chevron-down.svg" class="pos-mainpage arrowImg"></a>
         </div>
         <div id="section-main" class="section-main parallax">
             <img class="img-fit mob-main-img" src="./CA/รูปหน้าhome/หน้าหลัก.png" alt="main-logo">
         </div>
 
         <section id="section-nm-1">
-            <div class="grid-parent-col2 mob-grid-parent-col2" >
+            <div class="sec-description">
+                <h1 id="description" class="description head-mob"><span id="highlight">ขยะอันตราย</span>คืออะไร?</h1>
+            </div>
+            <div class="grid-parent-col2 mob-grid-parent-col2">
                 <div class="span-1 mob-span-2 flex-left-parent sec1 mob-flex-center-parent">
                     <img id="item" class="item-1" src="./CA/รูปหน้าhome/หลอด-resize.PNG" alt="light">
                     <div id="circle" class="circle-nr pos-item-1"></div>
@@ -57,7 +60,7 @@
                 </div>
                 <div class="span-1 mob-span-2 flex-left-parent">
                     <div class="sec-description">
-                        <h1 id="description" class="description"><span id="highlight">ขยะอันตราย</span>คืออะไร?</h1>
+                        <h1 id="description" class="description head-nr"><span id="highlight">ขยะอันตราย</span>คืออะไร?</h1>
                         <p id="description" class="sub-description des-right">ขยะอันตราย คือ ขยะติดเชื้อที่มีสารคัดหลั่งต่าง ๆ
                             ขยะที่มีพิษ วัสดุที่ไม่ใช้แล้ว ผลิตภัณฑ์เสื่อมสภาพ
                             ขยะที่เป็นอันตรายต่อสุขภาพ หรือภาชนะบรรจุต่าง ๆ
@@ -113,23 +116,23 @@
                     <h1 id="description" class="description"><span id="highlight">ในหนึ่งวัน</span><br>
                         เจอ<span id="highlight">ความเสี่ยงอะ</span>ไรบ้าง</h1>
                 </div>
-                <div class="span-1 flex-right-parent mob-span-2">
-                    <div class="sec-description-right" style="padding: 0px 0vw 0px 7vw; width: 50vw;">
-                        <p id="description" class="sub-description">เสี่ยงติดเชื้อโรค จากพวกเข็มฉีดยา หน้ากากอนามัย กับของแหลมคม ต้องเจอปัญหาด้าน <br>สุขภาพ โรคทางเดินหายใจจากพิษของสารเคมีที่ติดมากับขยะ</p>
+                <div class="span-1 flex-right-parent mob-span-2 des-center align-start">
+                    <div class="sec-description-right des-track1">
+                        <p id="description" class="sub-description">เสี่ยงติดเชื้อโรค จากพวกเข็มฉีดยา หน้ากากอนามัย กับของแหลมคม ต้องเจอปัญหาด้านสุขภาพ โรคทางเดินหายใจจากพิษของสารเคมีที่ติดมากับขยะ</p>
                     </div>
                 </div>
-                <div class="span-1 flex-right-parent mob-span-2">
+                <div class="span-1 flex-right-parent mob-span-2 align-start">
                     <img id="element" class="img-nr img-gscale" src="./CA/รูปหน้าhome/แผลมือ.PNG" alt="handscar">
                 </div>
             </div>
         </section>
 
         <section id="section-nm-5">
-            <div class="grid-parent-col2">
-                <div class="span-1 flex-left-parent">
-                    <img id="element" class="img-nr-2 img-gscale" src="./CA/รูปหน้าhome/กองขยะ GIF2.gif" alt="garbage-2">
+            <div class="grid-parent-col2 mob-grid-parent-col2">
+                <div class="span-1 flex-left-parent mob-span-2">
+                    <img id="element-gif" class="img-nr-2 img-gscale" src="./CA/รูปหน้าhome/กองขยะ GIF2.gif" alt="garbage-2">
                 </div>
-                <div class="span-1 flex-left-parent">
+                <div class="span-1 flex-left-parent mob-span-2">
                     <div class="sec-description" style="padding-left: 100px;">
                         <h1 id="description" class="description"><span id="highlight">ปลายทางสุดท้าย</span>ของ<br>
                             <span id="highlight">ขยะที่ไม่ได้รีไซเคิล</span>คือที่ไหน</h1>
@@ -235,14 +238,11 @@
         </section>
 
         <footer>
-            
-            <div class="arrow-back-top">
-                <a class="arrow up" href="#section-main"></a>
-                <a href="#section-main"><p>กลับขึ้นด้านบน</p></a>
+            <div class="pos-arrowCenter">
+                <a href="#section-main" class="arrow up" style="z-index: 1;"><img src="./img/chevron-up.svg" class="pos-mainpage arrowImg"><p>กลับขึ้นด้านบน</p></a>
             </div>
-            <div class="arrow-back-next">
-                <a class="arrow right" href="dangerous_thing_nearby.html"></a>
-                <a href="dangerous_thing_nearby.html"><p>ของอันตรายใกล้ตัว</p></a>
+            <div class="pos-arrowRight">
+                <a href="./dangerous_thing_nearby.html" class="arrow right"><p>ของอันตรายใกล้ตัว</p><img src="./img/chevron-right.svg" class="pos-mainpage arrowImg"></a>
             </div>
         </footer>
 
