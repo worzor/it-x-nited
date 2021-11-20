@@ -1976,6 +1976,10 @@ img.pos-mock-10{
 		right: 47%;
 	}
 
+	.mob-nav-logo{
+		width: 100%; display: flex; justify-content: end;
+	}
+
 	.mob-sub-container{
 		padding: 0 10vw;
 	}
