@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>Household Garbage</title>
@@ -28,12 +31,23 @@
                 <a href="dangerous_thing_nearby.html" class="btn">ของอันตรายใกล้ตัว</a>
                 <a href="dangerous_prevent.html" class="btn">วิธีป้องกัน</a>
                 <a href="game.html" class="btn">เกม</a>
-                <a href="" class="icon" onclick="">
+                <a class="icon" onclick="miniNavActive()">
                     <i class="fa fa-bars"></i>
                   </a>
             </div>
         </div>
     </header>
+        <!--Mini Navbar-->
+        <div id="mini-nav-bar" class="mini-nav-bar "> 
+            <div style="width: 100%; display: flex; justify-content: end;">
+                <a onclick="miniNavDisactive()"><img src="./CA/รูปหน้าhome/โลโก้เล็ก.png" alt="mini-logo" class="nav-logo-img"></a>
+            </div>
+            <a href="./index.html"><p class="mini-nav-content">หน้าหลัก</p></a>
+            <a href="./dangerous_thing_nearby.html"><p class="mini-nav-content">ของอันตรายใกล้ตัว</p></a>
+            <a href="./dangerous_prevent.html"><p class="mini-nav-content">เเยกของอันตรายด้วยมือเรา</p></a>
+            <a href="./game.html"><p class="mini-nav-content">เกม</p></a>
+        </div>
+
         <div class="logo">
             <img id="logo" src="./CA/รูปหน้าhome/โลโก้หลัก.png" alt="logo">
         </div>
@@ -43,7 +57,6 @@
         <div id="section-main" class="section-main parallax">
             <img class="img-fit mob-main-img" src="./CA/รูปหน้าhome/หน้าหลัก.png" alt="main-logo">
         </div>
-
         <section id="section-nm-1">
             <div class="sec-description">
                 <h1 id="description" class="description head-mob"><span id="highlight">ขยะอันตราย</span>คืออะไร?</h1>
@@ -56,7 +69,7 @@
                     <div id="circle" class="circle-sm pos-item-2"></div>
                     <img id="item" class="item-3" src="./CA/รูปหน้าhome/แมส-resize.PNG" alt="mask">
                     <div id="circle" class="circle-nr pos-item-3"></div>
-                    <img class="img-nr" src="./CA/รูปหน้าhome/ขยะ-1.PNG" alt="garbage-1">
+                    <img id="element" class="img-nr img-el" src="./CA/รูปหน้าhome/ขยะ-1.PNG" alt="garbage-1">
                 </div>
                 <div class="span-1 mob-span-2 flex-left-parent">
                     <div class="sec-description">
@@ -86,7 +99,7 @@
                     <div id="circle" class="circle-nr pos-item-4"></div>
                     <img id="item" class="item-5" src="./CA/รูปหน้าhome/ขวดน้ำมัน-resize.PNG" alt="oil-bottle">
                     <div id="circle" class="circle-sm pos-item-5"></div>
-                    <img class="img-big bottle" src="./CA/รูปหน้าhome/กองขวด.PNG" alt="garbage-1">
+                    <img id="element" class="img-big bottle img-el" src="./CA/รูปหน้าhome/กองขวด.PNG" alt="garbage-1">
                 </div>
             </div>
         </section>
@@ -122,19 +135,23 @@
                     </div>
                 </div>
                 <div class="span-1 flex-right-parent mob-span-2 align-start">
-                    <img id="element" class="img-nr img-gscale" src="./CA/รูปหน้าhome/แผลมือ.PNG" alt="handscar">
+                    <img id="element" class="img-nr img-gscale mob-img-fit" src="./CA/รูปหน้าhome/แผลมือ.PNG" alt="handscar">
                 </div>
             </div>
         </section>
 
         <section id="section-nm-5">
-            <div class="grid-parent-col2 mob-grid-parent-col2">
+            <div class="sec-description">
+                <h1 id="description" class="description head-mob" style="text-align: center;"><span id="highlight">ปลายทางสุดท้าย</span>ของ<br>
+                    <span id="highlight">ขยะที่ไม่ได้รีไซเคิล</span>คือที่ไหน</h1>
+            </div>
+            <div class="grid-parent-col2 mob-grid-parent-col2 mob-sec-garbage">
                 <div class="span-1 flex-left-parent mob-span-2">
                     <img id="element-gif" class="img-nr-2 img-gscale" src="./CA/รูปหน้าhome/กองขยะ GIF2.gif" alt="garbage-2">
                 </div>
                 <div class="span-1 flex-left-parent mob-span-2">
-                    <div class="sec-description" style="padding-left: 100px;">
-                        <h1 id="description" class="description"><span id="highlight">ปลายทางสุดท้าย</span>ของ<br>
+                    <div class="sec-description des-garbage">
+                        <h1 id="description" class="description head-nr"><span id="highlight">ปลายทางสุดท้าย</span>ของ<br>
                             <span id="highlight">ขยะที่ไม่ได้รีไซเคิล</span>คือที่ไหน</h1>
                         <p id="description" class="sub-description">บ่อขยะ เพราะไม่ได้ผ่านการคัดแยกที่ถูกต้อง <br>
                             ทุกอย่างเลยมากองรวมกันที่ภูเขาขยะ </p>
@@ -144,45 +161,55 @@
         </section>
 
         <section id="section-nm-6">
-            <div class="grid-parent-col2">
-                <div class="span-1 flex-right-parent">
-                    <div class="sec-description" style="padding: 0px 0vw 0px 7vw;">
+            <div class="grid-parent-col2 mob-grid-parent-col2">
+                <div class="span-1 flex-right-parent mob-span-2 mach-bt">
+                    <div class="sec-description sec-des-mach">
                         <h1 id="description" class="description"><span id="highlight">การจัดการ</span>ของบ่อขยะเป็นยังไง</h1>
-                        <p id="description" class="sub-description">มีการเปิดให้ชาวบ้านแถวนั้นมาเก็บขยะของเก่าไปขาย บ่อบางแห่งก็มี <br>
+                        <p id="description" class="sub-description mach-sub-des">มีการเปิดให้ชาวบ้านแถวนั้นมาเก็บขยะของเก่าไปขาย บ่อบางแห่งก็มี <br>
                             การคัดแยกขยะกันอีกทีร่อนขยะอินทรีย์เอาไปทำปุ๋ย ถ้ากำจัดขยะอย่าง <br>
                             ถูกวิธีก็สามารถนำกลับมาใช้เป็นพลังงานได้ </p>
                     </div>
                 </div>
-                <div class="span-1 flex-right-parent img-comment">
-                    <img class="img-nr crop-1" src="./CA/รูปหน้าhome/รถ.PNG" alt="handscar">
+                <div class="span-1 flex-right-parent img-comment mob-span-2 mach-top">
+                    <img id="element" class="img-nr crop-1 img-el" src="./CA/รูปหน้าhome/รถ.PNG" alt="handscar">
                     <div class="comment">
-                        <p style="padding-left: 150px;" id="comment">*ตะเเกรงร่อนขยะ ใช้สำหรับเเยกดินออกจากขยะ</p>
+                        <p style="" id="comment" class="mach-comment">*ตะเเกรงร่อนขยะ ใช้สำหรับเเยกดินออกจากขยะ</p>
+                    </div>
+                </div>
+                <div class="span-1 flex-right-parent mob-span-2 mach-top">
+                    <div class="sec-description" style="padding: 0px 9vw 0px 9vw;">
+                        <p id="description" class="sub-description nr-mach-sub-des">มีการเปิดให้ชาวบ้านแถวนั้นมาเก็บขยะของเก่าไปขาย บ่อบางแห่งก็มี
+                            การคัดแยกขยะกันอีกทีร่อนขยะอินทรีย์เอาไปทำปุ๋ย ถ้ากำจัดขยะอย่าง
+                            ถูกวิธีก็สามารถนำกลับมาใช้เป็นพลังงานได้ </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="section-nm-7">
-            <div class="des-top">
-                <h1 id="description" class="description"><span id="highlight" style="z-index: 1;">นาย ศักดิ์เจริญ แย้มบู่</span></h1>
+            <div class="des-top mob-des-person2">
+                <h1 id="description" class="description name2"><span id="highlight" style="z-index: 1;">นาย ศักดิ์เจริญ แย้มบู่</span></h1>
                 <p id="description" class="sub-description">ฝ่ายรักษาความสะอาด เขตกทม.</p>
             </div>
             <img class="img-fit" src="./CA/รูปหน้าhome/ลุง-2.png" alt="uncle-1">
          </section>
 
          <section id="section-nm-8">
-            <div class="grid-parent-col2">
-                <div class="span-1 flex-left-parent">
+            <div class="sec-description">
+                <h1 id="description" class="description head-mob" style="text-align: center;">สิ่งที่<span id="highlight">เลวร้ายที่สุด</span>คืออะไร?</h1>
+            </div>
+            <div class="grid-parent-col2 mob-grid-parent-col2 dust-sec">
+                <div class="span-1 flex-left-parent mob-span-2 mob-flex-center-parent">
                     <img id="dustman" class="img-nr" src="./CA/รูปหน้าhome/คนเก็บ-1.PNG" alt="dustman-1">
                 </div>
-                <div class="span-1 flex-left-parent">
+                <div class="span-1 flex-left-parent mob-span-2 mob-flex-center-parent">
                     <div class="sec-description" id="dustman-des">
-                        <h1 id="description" class="description">สิ่งที่<span id="highlight">เลวร้ายที่สุด</span>คืออะไร?</h1>
-                        <p id="description" class="sub-description">เคยมีพนักงานคนใหม่มาทำงานฟันแฟลต <br>
-                            (การเก็บขยะเน่าเสียตามปล่องทิ้งขยะที่รถ <br>
-                            ไม่สามารถเข้าไปเก็บได้) วันแรกก็ลาออกเลย <br>
-                            เพราะคุณภาพชีวิตที่ย่ำแย่ที่เป็นผลพวงจากการ <br>
-                            ไม่แยกขยะของคนไทย
+                        <h1 id="description" class="description head-nr">สิ่งที่<span id="highlight">เลวร้ายที่สุด</span>คืออะไร?</h1>
+                        <p id="description" class="sub-description dust-des">เคยมีพนักงานคนใหม่มาทำงานฟันแฟลต 
+                            (การเก็บขยะเน่าเสียตามปล่องทิ้งขยะที่รถ 
+                            ไม่สามารถเข้าไปเก็บได้) วันแรกก็ลาออกเลย 
+                            เพราะคุณภาพชีวิตที่ย่ำแย่ที่เป็นผลพวงจากการ 
+                            ไม่แยกขยะของคนไทย</p>
                     </div>
                 </div>
             </div>
@@ -206,10 +233,10 @@
             </div>
             <div class="grid-parent-col2">
                 <div class="span-2 flex-center-parent">
-                    <h1 id="description" class="description">เก็บขยะ<span id="highlight">หนึ่งวัน</span>ใช้เวลากี่<span id="highlight">ชั่วโมง</span></h1>
+                    <h1 id="description" class="description dust-head">เก็บขยะ<span id="highlight">หนึ่งวัน</span>ใช้เวลากี่<span id="highlight">ชั่วโมง</span></h1>
                 </div>
                 <div class="span-2 flex-center-parent">
-                    <img class="img-nr-3" src="./CA/รูปหน้าhome/คนเก็บ-2.PNG" alt="dustman-2">
+                    <img id="element" class="img-nr-3 img-el" src="./CA/รูปหน้าhome/คนเก็บ-2.PNG" alt="dustman-2">
                 </div>
                 <div class="span-2 flex-center-parent">
                     <p id="description" class="sub-description">6-10 ชั่วโมง <br>
@@ -219,18 +246,18 @@
         </section>
 
         <section id="section-nm-10">
-            <div class="grid-parent-col2">
-                <div class="span-2 flex-center-parent">
+            <div class="grid-parent-col2 mob-grid-parent-col2">
+                <div class="span-2 flex-center-parent mach-bt">
                     <h1 id="description" class="description"><span id="highlight">อยากบอกอะไร</span>กับคนทิ้งขยะ</h1>
                 </div>
-                <div class="span-1 flex-left-parent">
-                    <img class="img-nr crop-2" src="./CA/รูปหน้าhome/คนเก็บ-3.PNG" alt="dustman-3">
+                <div class="span-1 flex-left-parent mob-span-2 mob-flex-center-parent">
+                    <img id="element" class="img-nr crop-2 img-el" src="./CA/รูปหน้าhome/คนเก็บ-3.PNG" alt="dustman-3">
                 </div>
-                <div class="span-1 flex-left-parent">
-                    <div class="sec-description" style="padding-left: 120px;">
-                        <p id="description" class="sub-description">ช่วยกันคัดแยกขยะให้ถูกวิธี ทิ้งขยะให้เป็นที่ <br>
-                            และลดขยะด้วยตัวคุณเอง ถุงพลาสติกที่ <br>
-                            สามารถนำกลับมาใช้ใหม่ก็เอาไปใช้ใหม่ <br>
+                <div class="span-1 flex-left-parent mob-span-2">
+                    <div class="sec-description dust3-des">
+                        <p id="description" class="sub-description">ช่วยกันคัดแยกขยะให้ถูกวิธี ทิ้งขยะให้เป็นที่
+                            และลดขยะด้วยตัวคุณเอง ถุงพลาสติกที่
+                            สามารถนำกลับมาใช้ใหม่ก็เอาไปใช้ใหม่
                             บ้านเมืองเราต้องช่วยกันรักษาความสะอาด</p>
                     </div>
                 </div>

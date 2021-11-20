@@ -45,7 +45,7 @@ function trigger_Bar(el){ /*Function ย่อยสำหรับ Trigger ต�
 }
 
 function trigger_el(el){ /*Function ย่อยสำหรับ Trigger ตัว element ทั่วไปให้ active*/
-    let thisTime = el.getBoundingClientRect().y - ((window.innerHeight/2) + 100);
+    let thisTime = el.getBoundingClientRect().y - ((window.innerHeight/2) - 500);
     if((thisTime - winH) < 0){
         el.classList.add("active");
     }
@@ -223,6 +223,16 @@ function tooltip_reset(){
     for(i in tool_All){
         tool_All[i].classList.remove("active")
     }
+}
+
+function miniNavActive(){
+    document.getElementById("mini-nav-bar").classList.remove("unactive");
+    document.getElementById("mini-nav-bar").classList.add("active");
+}
+
+function miniNavDisactive(){
+    document.getElementById("mini-nav-bar").classList.remove("active");
+    document.getElementById("mini-nav-bar").classList.add("unactive");
 }
 
 /*var head_id = ""
