@@ -438,6 +438,10 @@ footer {
 	width: 0;
 	display: none;
 }
+.nav-logo-img{
+	width: 0;
+	height: 0;
+}
 .img-long1, .img-long2{
 	width: auto;
 	height: 210vh; /*120vw*/
