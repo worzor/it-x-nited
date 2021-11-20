@@ -1579,7 +1579,7 @@ img.pos-mock-10{
 		right: 0;
 	}
 	.mini-nav-bar.active{
-		background-color: #FD2D2D; position: fixed; height: 100vh; top: 0; width: 100%; z-index: 999;
+		background-color: #1a1919; position: fixed; height: 100vh; top: 0; width: 100%; z-index: 999;
 		animation: nav-active 1s;
 		animation-fill-mode: forwards;
 	}
@@ -1981,7 +1981,7 @@ img.pos-mock-10{
 	}
 
 	.mob-nav-logo{
-		width: 100%; display: flex; justify-content: end;
+		width: 100%; display: flex; -webkit-justify-content: end;
 	}
 
 	.mob-sub-container{
