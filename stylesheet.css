@@ -1188,10 +1188,6 @@ img.pos-mock-10{
 	animation: arrowLeftIn 1.5s;
 	animation-fill-mode: forwards;
 }
-.arrow.right:hover{
-	animation: arrowRightIn 1.5s;
-	animation-fill-mode: forwards;
-}
 .arrow.right{
 	padding-right: 10vh;
 	cursor: pointer;
@@ -1199,13 +1195,17 @@ img.pos-mock-10{
 	animation-fill-mode: forwards;
 	display: flex; align-items: center;
 }
+.arrow.right:hover{
+	animation: arrowRightIn 1.5s;
+	animation-fill-mode: forwards;
+}
 @keyframes arrowRightOut {
-	0%{transform: translateX(0px);}
-	100%{transform: translateX(-15px);}
+	0%{transform: translateX(15px);}
+	100%{transform: translateX(0px);}
 }
 @keyframes arrowRightIn {
-	0%{transform: translateX(-15px);}
-	100%{transform: translateX(0px);}
+	0%{transform: translateX(0px);}
+	100%{transform: translateX(15px);}
 }
 @keyframes arrowUpIn {
 	0%{transform: translateY(0px);}
@@ -1387,6 +1387,23 @@ img.pos-mock-10{
 	box-shadow: none;
 	transition: 0.5s;
 }
+
+.armAnim{
+	position: absolute;
+	width: 30vw;
+	right: -100px;
+	top: -100px;
+	transform-origin: top right;
+	animation: armAnimation 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes armAnimation {
+	0%{transform: rotate(-90deg)}
+	70%{transform: rotate(-43deg)}
+	100%{transform: rotate(-45deg)}
+}
+
 @keyframes arrow {
 	0% {
 		opacity: 1;
@@ -1560,6 +1577,9 @@ img.pos-mock-10{
 
 /*สำหรับ mobile*/
 @media (max-width: 768px) {
+	.pos-arrowCenter.main{
+		top: -100px;
+	}
 	.mob-mock-info-container{
 		width: 100%;
 		height: 25vh;
@@ -1608,7 +1628,7 @@ img.pos-mock-10{
 		height: 0;
 		right: 0;*/
 		background-color: #1a1919; position: fixed; height: 100vh; top: 0; width: 100%; z-index: 999;
-		right: -100vw;
+		right: -110%;
 		transition: 1s;
 	}
 	.mini-nav-bar.active{
@@ -1616,6 +1636,7 @@ img.pos-mock-10{
 		animation-fill-mode: forwards;*/
 		right: 0;
 		transition: 1s;
+
 	}
 	.mini-nav-bar p{
 		font-size: 5vw;
@@ -2115,6 +2136,13 @@ img.pos-mock-10{
 	.arrow.down.center{
 		right: 47%;
 	}
+	.arrowImg{
+		width:30px; 
+		height:30px;
+	}
+	.arrow p{
+		font-size: 15px;
+	}
 
 	.mob-nav-logo{
 		width: 100%; display: -webkit-flex; -webkit-justify-content: end;
@@ -2303,5 +2331,13 @@ img.pos-mock-10{
 	}
 	.mob-mock.active, .mob-thing.active{
 		filter: drop-shadow(0px 0px 7px #FD2D2D );
+	}
+	.armAnim{
+		width: 0;
+		height: 0;
+		display: none;
+		top: 0;
+		right: 0;
+		animation: none;
 	}
   }
