@@ -1174,7 +1174,7 @@ img.pos-mock-10{
 	position: absolute;
 	width: 100%;
 	display: -webkit-flex; -webkit-align-items: end; -webkit-justify-content: end;
-	justify-content: end; align-items: end;
+	justify-content: end; align-items: end; display: flex;
 }
 .pos-arrowLeft{
 	position: absolute;
