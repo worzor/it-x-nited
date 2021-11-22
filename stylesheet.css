@@ -78,7 +78,9 @@ html {
 	scroll-snap-type: y mandatory;*/
 	scroll-behavior: smooth;
 }
-
+.mob-mock-info-container p, .mob-mock-info-container h1, .mob-thing-info-container p, .mob-thing-info-container h1{
+	font-size: 0;
+}
 header .main {
 	position: absolute;
 	width: 100%;
@@ -433,7 +435,10 @@ footer {
 .mock-container{
 	right: 0; top: 0; margin-top: 50px; height: auto; position: absolute;
 }
-.mob-mock-container{
+#mock-info-para{
+	padding-right: 52vw;
+}
+.mob-mock-container, .mob-thing-container{
 	height: 0;
 	width: 0;
 	display: none;
@@ -456,6 +461,11 @@ footer {
 .img-long2{
 	opacity: 0;
 	transition: 0.5s;
+}
+
+.model{
+	width: 0;
+	height: 0;
 }
 
 .container-img-long:hover .img-long1{
@@ -557,6 +567,12 @@ footer {
 
 .click{
 	font-size: 0;
+}
+
+.mob-click{
+	font-size: 0;
+	position: absolute;
+	display: none;
 }
 
 .click.active{
@@ -1544,9 +1560,21 @@ img.pos-mock-10{
 
 /*สำหรับ mobile*/
 @media (max-width: 768px) {
+	.mob-mock-info-container{
+		width: 100%;
+		height: 25vh;
+		padding: 0 10vw;
+	}
+	.mob-thing-info-container{
+		width: 100%;
+		height: 34vh;
+		padding: 0 10vw;
+		overflow-y: auto;
+	}
 	.click.active{
 		padding: 0;
 		margin: 0;
+		font-size: max(25px, 2.1vw);
 	}
 	.click{
 		font-size: 0 !important;
@@ -1557,7 +1585,9 @@ img.pos-mock-10{
 		margin-top: 10vh;
 		margin-bottom: 5vw;
 		text-align: center;
-		padding: 0 10vw;
+		padding: 0 25vw;
+		position: absolute;
+		display: flex;
 	}
 	.mock-container{
 		visibility: hidden;
@@ -1574,30 +1604,32 @@ img.pos-mock-10{
 		right: 0;
 	}
 	.mini-nav-bar{
-		width: 0;
+		/*width: 0;
 		height: 0;
-		right: 0;
+		right: 0;*/
+		background-color: #1a1919; position: fixed; height: 100vh; top: 0; width: 100%; z-index: 999;
+		right: -100vw;
+		transition: 1s;
 	}
 	.mini-nav-bar.active{
-		background-color: #1a1919; position: fixed; height: 100vh; top: 0; width: 100%; z-index: 999;
-		animation: nav-active 1s;
-		animation-fill-mode: forwards;
+		/*animation: nav-active 1s;
+		animation-fill-mode: forwards;*/
+		right: 0;
+		transition: 1s;
 	}
 	.mini-nav-bar p{
-		font-size: 0;
-	}
-	.mini-nav-bar.active p{
 		font-size: 5vw;
 		font-weight: 300;
 		color: #FD2D2D;
 	}
-	.mini-nav-bar.active .mini-nav-content{
+	.mini-nav-bar .mini-nav-content{
 		display: block;
 	}
+	/*
 	@keyframes nav-active{
 		0%{transform: translateX(300px);}
 		100%{transform: translateX(0px);}
-	}
+	}*/
 	.game-head{
 		visibility: visible;
 		height: auto;
@@ -1688,6 +1720,15 @@ img.pos-mock-10{
 	.des-center{
 		justify-content: center;
 	}
+	.des-header-big{
+		font-size: max(29px, 2.1vw);
+		padding-right: 15vw;
+	}
+	.des-long-container{
+		position: relative;
+		margin: 0 10vw;
+		width: auto;
+	}
 	.sub-container h1{
 		font-size: max(29px, 2.1vw);
 	}
@@ -1724,6 +1765,10 @@ img.pos-mock-10{
 		padding-right: 0;
 		padding-left: 0;
 	}
+	.sub-description{
+		font-size: max(16px, 1.5vw);
+		font-weight: 200;
+	}
 	#section-nm-1-2{
 		height: 60vh;
 	}
@@ -1757,6 +1802,9 @@ img.pos-mock-10{
 	}
 	#section-nm-10{
 		margin-top: 0;
+	}
+	#section-nm-1-p2{
+		height: 72vh;
 	}
 	.arrow.left{
 		padding-left: 5vw;
@@ -1939,8 +1987,94 @@ img.pos-mock-10{
 	}
 
 	.mob-pos-mock-1{
+		width: 25vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-pos-mock-2{
+		width: 27vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-pos-mock-3{
+		width: 38vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-pos-mock-4{
+		width: 22vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-pos-mock-5{
+		width: 30vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-pos-mock-6{
+		width: 22vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-pos-mock-7{
 		width: 35vw;
-		padding: 6vh 10vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-pos-mock-8{
+		width: 55vw;
+		padding: 5vw 5vw;
+		padding-bottom: 5vw;
+	}
+	.mob-pos-mock-9{
+		width: 45vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-pos-mock-10{
+		width: 22vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-thing-mock-1{
+		width: 13vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-thing-mock-2{
+		width: 30vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-thing-mock-3{
+		width: 33vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-thing-mock-4{
+		width: 28vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-thing-mock-5{
+		width: 25vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-thing-mock-6{
+		width: 60vw;
+		padding: 0 5vw;
+		padding-bottom: 5vw;
+	}
+	.mob-thing-mock-7{
+		width: 8vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
+	}
+	.mob-thing-mock-8{
+		width: 57vw;
+		padding: 0 10vw;
+		padding-bottom: 5vw;
 	}
 	/* สร้างสำหรับ Mobile */
 	.crop-1{
@@ -2057,13 +2191,26 @@ img.pos-mock-10{
 		height: 70%;
 	}
 	.mob-mock-container{
-		position: absolute;
 		overflow-x: auto;
 		overflow-y: hidden;
-		height: 45vh;
-		width: 500vw;
-		background-color: black;
+		height: 38vh;
+		width: auto;
+		background-color: #222222;
 		display: flex;
+		scroll-snap-type: mandatory;
+		scroll-snap-points-x: repeat(300px);
+		scroll-snap-type: x mandatory;
+	}
+	.mob-thing-container{
+		overflow-x: auto;
+		overflow-y: hidden;
+		height: 28vh;
+		width: auto;
+		background-color: #222222;
+		display: flex;
+		scroll-snap-type: mandatory;
+		scroll-snap-points-x: repeat(300px);
+		scroll-snap-type: x mandatory;
 	}
 	.nr-mach-sec{
 		height: 0; width: 0;
@@ -2084,5 +2231,75 @@ img.pos-mock-10{
 	}
 	.name2 {
 		font-weight: 200;
+	}
+	.mob-mock-info-container h1, .mob-mock-info-container p, .mob-thing-info-container h1, .mob-thing-info-container p{
+		margin: 0;
+	}
+	.mob-mock-info-container h1, .mob-thing-info-container h1{
+		font-size: max(23px);
+		color: #FD2D2D;
+	}
+	.mob-mock-a{
+		align-self: end;
+		scroll-snap-align: center;
+	}
+	.mob-center-text{
+		text-align: center;
+	}
+	.img-long1, .img-long2{
+		height: 0;
+		width: 0;
+	}
+	#the-girl{
+		align-self: end;
+		padding: 0;
+		width: 80%;
+	}
+	.model{
+		left: 0;
+		right: 0;
+		margin-right: auto;
+		margin-left: auto;
+		width: 80vw;
+		height: auto;
+		display: block;
+	}
+	.long-des .description{
+		margin-bottom: 5px;
+	}
+	.long-des .sub-description{
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+	.long-des .sub-description p{
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+	section.long-section{
+		height: 270vh;
+	}
+	footer{
+		height: 75px;
+		margin-top: 50px;
+	}
+	.img-sign, .img-sign.active{
+		width: 0;
+		height: 0;
+	}
+	#mock-info-para{
+		padding-right: 0;
+	}
+	#mock-info-header, #mock-info-para{
+		font-size: 0;
+		visibility: hidden;
+		padding: 0;
+		width: 0;
+		height: 0;
+	}
+	.mob-thing-info-container .mob-text-header{
+		padding-right: 50vw;
+	}
+	.mob-mock.active, .mob-thing.active{
+		filter: drop-shadow(0px 0px 7px #FD2D2D );
 	}
   }

@@ -84,7 +84,7 @@ function gif_trigger(){
 }
 
 function mockup_click(el_mock){ /*Function หลักที่ใช้ควบคุมการเเสดงผลของ mock info*/
-    document.querySelector("#des-click").classList.remove("active")
+    document.querySelector("#des-click").classList.remove("active");
     document.querySelector("#text-container").classList.add("fade-in-text");
     var mockSign = document.querySelectorAll("#mock-sign");
     var mockupAll = document.querySelectorAll("#mock");
@@ -233,6 +233,145 @@ function miniNavActive(){
 function miniNavDisactive(){
     document.getElementById("mini-nav-bar").classList.remove("active");
     document.getElementById("mini-nav-bar").classList.add("unactive");
+}
+
+function mock_scrolling(){
+    var winW = window.innerWidth;
+    var last = document.getElementById("last");
+    var x = last.getBoundingClientRect().right;
+    console.log(parseInt(x - winW));
+}
+
+function mob_mockup_click(mock){
+    var header = document.getElementById("mob-mock-info-header");
+    var subDes = document.getElementById("mob-mock-info-para");
+    if(mock == 1){
+        header.innerText = "เป็นอันตรายต่อสิ่งแวดล้อม";
+        subDes.innerText = "เป็นอันตรายต่อสิ่งแวดล้อมในน้ำทั้งเฉียบพลันและเรื้อรัง เช่น หลอดฟลูออเรสเซนต์ ขวดยา ถ่านไฟฉาย กระป๋องสีสเปรย์ กระป๋อง ยาฆ่าแมลง ภาชนะ บรรจุสารอันตรายต่าง ๆ"
+    }
+    if(mock == 2){
+        header.innerText = "เป็นอันตรายต่อสุขภาพ";
+        subDes.innerText = "สารก่อมะเร็ง อาการแพ้ต่อระบบทางเดินหายใจ ความเป็นพิษต่อระบบสืบพันธุ์ก่อให้เกิดการกลายพันธุ์ของเซลล์สืบพันธุ์"
+    }
+    if(mock == 3){
+        header.innerText = "สารกัดกร่อน";
+        subDes.innerText = "สารที่มีปฏิกิริยาเคมีจะก่อให้เกิดความเสียหายต่อเนื้อเยื่อและกัดกร่อนอุปกรณ์ไอระเหยเกิดการระคายเคืองต่อจมูกและตาเช่นภาชนะบรรจุน้ํากรด ในแบตเตอรี่รถยนต์หรือบรรจุน้ํายาทําความสะอาด"
+    }
+    if(mock == 4){
+        header.innerText = "สารที่ระเบิดได้";
+        subDes.innerText = "สารเคมีที่ก่อให้เกิดการระเบิดเมื่อรับความร้อน เเสง ความเร่ง หรือการเสียดสีเช่น ทีเอ็นที ดินปืน พลุไฟ ดอกไม้ไฟ"
+    }
+    if(mock == 5){
+        header.innerText = "สารที่ต้องระวัง";
+        subDes.innerText = "สารที่มีพิษเฉียบพลัน อันตรายเมื่อสัมผัสกับผิวหนังและดวงตา มีผลต่อทางเดินหายใจ ควรใช้ในที่อากาศถ่ายเท เช่น สีสเปรย์ สารปรอทในเครื่องสำอาง"
+    }
+    if(mock == 6){
+        header.innerText = "สารพิษ";
+        subDes.innerText = "สารเคมีที่ก่อให้เกิดอันตรายต่อสิ่งมีชีวิต และสิ่งแวดล้อม เช่น น้ำยาล้างห้องน้ำ สารฆ่าเเมลง สารปรอทในหลอดฟลูออเรสเซนต์"
+    }
+    if(mock == 7){
+        header.innerText = "สารช่วยให้ไฟลุก";
+        subDes.innerText = "คือสารที่มีเชื้อโรคปนเปื้อนหรือสารที่มีพยาธิปนเปื้อนที่เป็นสาเหตุของการเกิดโรคในสัตว์และคน เช่น หน้ากากอนามัย เข็มฉีดยาผ้าอนามัย ปรอทวัดไข้"
+    }
+    if(mock == 8){
+        header.innerText = "สารติดเชื้อ";
+        subDes.innerText = "คือสารที่มีเชื้อโรคปนเปื้อนหรือสารที่มีพยาธิปนเปื้อนที่เป็นสาเหตุของการเกิดโรคในสัตว์และคน เช่น หน้ากากอนามัย เข็มฉีดยา ผ้าอนามัย ปรอทวัดไข้"
+    }
+    if(mock == 9){
+        header.innerText = "สารออกซิไดซ์";
+        subDes.innerText = "สารช่วยทำให้เกิดเพลิงไหม้การระเบิดเมื่อสัมผัสกับวัตถุที่ไหม้ไฟและจะทำให้อัตราในการลุกไหม้เพิ่มขึ้นหรือทำให้เกิดการระเบิดเมื่อได้รับความร้อน การสั่นสะเทือน หรือแรงเสียดทาน เช่น สารคลอรีนที่ใช้ฆ่าเชื้อในสระว่ายน้ำ"
+    }
+    if(mock == 10){
+        header.innerText = "ก๊าซภายใต้ความดัน";
+        subDes.innerText = "เป็นสารที่จะระเบิดเมื่อได้รับความร้อน เช่น ภาชนะฉีดพ่น แก๊ซกระป๋อง ที่ประกอบไปด้วย ก๊าซอัด หรือก๊าซเหลว ไม่ควรใช้กับคอนโดสูง เพราะอาจเกิดแรงดันและระเบิดได้"
+    }
+    var mobClick = document.getElementById("mob-click");
+    if(mobClick.classList.contains("active")){
+        mobClick.classList.remove("active");
+    }
+    mobMockActive(mock);
+}
+
+function mobMockActive(mock){
+    var mock = mock-1
+    var mobMockAll = document.querySelectorAll("#mobMock");
+    for(let m = 0; m <= mobMockAll.length; m++){
+        if(mock == m){
+            mobMockAll[m].classList.add("active");
+        }
+        else{
+            mobMockAll[m].classList.remove("active");
+        }
+    }
+
+}
+
+function mob_thing_click(thing){
+    var header = document.getElementById("mob-mock-info-header");
+    var subDes = document.getElementById("mob-mock-info-para");
+    var header2 = document.getElementById("mob-mock-info-header2");
+    var subDes2 = document.getElementById("mob-mock-info-para2");
+    if(thing == 1){
+        header.innerText = "กระป๋องสเปรย์";
+        subDes.innerText = "นำแก๊สกระป๋องและกระป๋องสเปรย์ ที่ยังเหลือไส้ในอยู่ ใส่ลงในถุงพลาสติกโปร่งใส ห้ามใส่ลงในถุงขยะเฉพาะ วางในจุดทิ้งขยะโดยห่างจากขยะอื่น ๆ กรณีที่จะนำไปทิ้งที่อื่น ต้องทิ้งที่สถานที่กำจัดขยะ ของที่มีเชื้อเพลิง คอยระมัดระวังและหลีกเลี่ยงให้อยู่ไกลไฟ"
+        header2.innerText = "";
+        subDes2.innerText = "";
+        header.style.paddingRight = "50vw"
+    }
+    if(thing == 2){
+        header.innerText = "ขวดน้ำมันเครื่อง น้ำยาทำความสะอาด น้ำยาทาเล็บ ทินเนอร์ น้ำยาลบคำผิด";
+        subDes.innerText = "ให้ปิดฝาให้สนิท ห้ามนำของเหลวข้างในขวดมาเทรวมกัน เก็บในภาชนะที่ไม่รั่วซึม รวบรวมขวดไว้ในถุงพลาสติก ทำเครื่องหมายให้ชัดเจน แล้วนำไปทิ้งในถังขยะอันตราย ตอนเก็บควรระมัดระวัง เก็บไว้ในที่ร่ม และหลีกเลี่ยงให้อยู่ไกลไฟ"
+        header2.innerText = "";
+        subDes2.innerText = "";
+        header.style.paddingRight = "50vw"
+    }
+    if(thing == 3){
+        header.innerText = "ยาน้ำ";
+        subDes.innerText = "ทำลายฉลากยาด้านหน้า แล้วเติมเกลือ แป้ง ผงถ่าน หรือผงเครื่องเทศที่ไม่เป็นพิษ เช่น ขมิ้นหรือมัสตาร์ด ใส่ลงไปในยา เพื่อทำให้ยาน้ำดูไม่น่าดื่ม จากนั้นนำไปทิ้งในถังขยะรีไซเคิล ควรระมัดระวังและหลีกเลี่ยงให้อยู่ไกลไฟ"
+        header2.innerText = "ยาเม็ด";
+        subDes2.innerText = "เอายาที่หมดอายุ หรือไม่ต้องการออกจากบรรจุเดิม แล้วเอาไปรวมกับของอื่นที่รับประทานไม่ได้แล้วนำภาชนะที่บรรจุนำมารีไซเคิล";
+        header.style.paddingRight = "50vw"
+    }
+    if(thing == 4){
+        header.innerText = "หลอดไฟ สตาร์ทเตอร์";
+        subDes.innerText = "นำไปทิ้งในถังขยะอันตรายโดยต้องแยกออกจากขยะอื่น ๆ ให้ชัดเจน เช่น แยกใส่กล่องไว้ เพื่อป้องกันอันตรายหากหลอดไฟเกิดแตกสร้างความเสียหายต่อพนักงานเก็บขยะและการปนเปื้อนสู่สิ่งแวดล้อมควรระมัดระวังและหลีกเลี่ยงให้อยู่ไกลไฟ"
+        header2.innerText = "";
+        subDes2.innerText = "";
+        header.style.paddingRight = "50vw"
+    }
+    if(thing == 5){
+        header.innerText = "ขยะอิเล็กทรอนิกส์ถ่าน แบตเตอร์รี่มือถือ";
+        subDes.innerText = "เก็บรวมรวมถ่านเก่าใส่ไว้ในถุงดำแล้วติดป้ายว่าขยะพิษ เพื่อแจ้งให้พนักงานเก็บขยะทราบหรือหากมีซากถ่านไฟฉายเป็นจำนวนมากสามารถแจ้งเรียกฝ่ายความสะอาดของเขตที่พักอาศัยไปรับถึงที่ได้ ตอนเก็บควรระมัดระวัง และหลีกเลี่ยงให้อยู่ไกลไฟ"
+        header2.innerText = "";
+        subDes2.innerText = "";
+        header.style.paddingRight = "40vw"
+    }
+    if(thing == 6){
+        header.innerText = "ขยะติดเชื้อ แมส ผ้าอนามัย กระดาษชำระ ถุงยางอนามัย";
+        subDes.innerText = "เก็บรวบรวมไว้ในถุงพลาสติก 2 ชั้น โดยใช้ถุงแดงหรือเขียนข้อความ “ขยะติดเชื้อ” ให้เห็นชัดเจนมัดปากถุงให้แน่นเคลื่อนย้ายขยะไปยังจุดรับทิ้งขยะติดเชื้อที่จัดไว้โดยเฉพาะ"
+        header2.innerText = "";
+        subDes2.innerText = "";
+        header.style.paddingRight = "30vw"
+    }
+    if(thing == 7){
+        header.innerText = "ปรอทวัดไข้";
+        subDes.innerText = "หากตัวปรอทเกิดความเสียหาย เช่น แตก หรือมีรอยร้าวให้นำตัวปรอทเอามาผสมกับปูนซีเมนต์แล้วเทลงในกระป๋องพลาสติกขนาดเล็ก แล้วนำไปทิ้งในถังขยะอันตรายแต่หากตัวปรอทไม่มีความเสียหายให้เก็บแยกไว้ให้มิดชิด แล้วนำไปทิ้งในถังขยะอันตราย"
+        header2.innerText = "";
+        subDes2.innerText = "";
+        header.style.paddingRight = "0"
+    }
+    if(thing == 8){
+        header.innerText = "ของมีคม ใบมีด ฝากระป๋อง";
+        subDes.innerText = "นำกระดาษหนังสือพิมพ์มาห่อเเละใส่ถุงไว้พร้อมเขียนระบุให้กับพนักงานเก็บขยะ"
+        header2.innerText = "ไม้เสียบลูกชิ้น";
+        subDes2.innerText = "หักไม้เป็นท่อน ๆ ก่อน แล้วนำหนังยางมารัดให้แน่นก่อนทิ้ง";
+        header.style.paddingRight = "0"
+    }
+    var mobClick = document.getElementById("mob-click");
+    if(mobClick.classList.contains("active")){
+        mobClick.classList.remove("active");
+    }
+    mobMockActive(thing);
 }
 
 /*var head_id = ""

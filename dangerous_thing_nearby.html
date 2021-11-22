@@ -80,8 +80,8 @@
                     <h1 class="des-header-big">ของอันตรายใกล้ตัว</h1>
                     <p id="des-para-big">ให้เช็คดูตราสัญลักษณ์ที่ระบุไว้ที่ฉลากข้างบรรจุภัณฑ์ ดังนี้</p>
                     <h1 id="des-click" class="click active">ลองคลิกขวดทางด้านขวาดูสิ!</h1>
-                    <h1 id="mob-click" class="mob-click active">ลองคลิกแล้วเลื่อนดูที่สิ่งของด้านล่างสิ !</h1>
                 </div>
+                <h1 id="mob-click" class="mob-click active">ลองคลิกแล้วเลื่อนดูที่สิ่งของด้านล่างสิ !</h1>
                 <div id="text-container">
                     <img id="mock-sign" class="img-sign" src="./CA/ตราสัญลักษณ์/ต้องระวัง.png">
                     <img id="mock-sign" class="img-sign" src="./CA/ตราสัญลักษณ์/กัดกร่อน.png">
@@ -94,13 +94,24 @@
                     <img id="mock-sign" class="img-sign" src="./CA/ตราสัญลักษณ์/ติดเชื้อ.png">
                     <img id="mock-sign" class="img-sign" src="./CA/ตราสัญลักษณ์/ต่อสิ่งแวดล้ม.png">
                     <h1 id="mock-info-header" class="text-header"></h1>
-                    <p id="mock-info-para" style="padding-right: 52vw;"></p>
-                </div>
-                    <div class="mob-mock-container">
-                        <a><img class="mob-pos-mock-1" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKระวัง.png"></a>
-                        <a><img class="mob-pos-mock-1" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKระวัง.png"></a>
-                        <a><img class="mob-pos-mock-1" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKระวัง.png"></a>
+                    <p id="mock-info-para"></p>
+                    <div class="mob-mock-info-container">
+                        <h1 id="mob-mock-info-header" class="mob-text-header"></h1>
+                        <p id="mob-mock-info-para" style="padding-right: 30vw;"></p>
                     </div>
+                </div>
+                        <div class="mob-mock-container">
+                            <a class="mob-mock-a"><img id="mobMock" class="mob-pos-mock-1 mob-mock" onclick="mob_mockup_click(1)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKมลพิษ.png"></a>
+                            <a class="mob-mock-a"><img id="mobMock" class="mob-pos-mock-2 mob-mock" onclick="mob_mockup_click(2)"src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKสุขภาพ.png"></a>
+                            <a class="mob-mock-a"><img id="mobMock" class="mob-pos-mock-3 mob-mock" onclick="mob_mockup_click(3)"src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKกัดกร่อน.png"></a>
+                            <a class="mob-mock-a"><img id="mobMock" class="mob-pos-mock-4 mob-mock" onclick="mob_mockup_click(4)"src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKระเบิดได้.png"></a>
+                            <a class="mob-mock-a"><img id="mobMock" class="mob-pos-mock-5 mob-mock" onclick="mob_mockup_click(5)"src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKระวัง.png"></a>
+                            <a class="mob-mock-a"><img id="mobMock" class="mob-pos-mock-6 mob-mock" onclick="mob_mockup_click(6)"src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKสารพิษ.png"></a>
+                            <a class="mob-mock-a"><img id="mobMock" class="mob-pos-mock-7 mob-mock" onclick="mob_mockup_click(7)"src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKไวไฟ.png"></a>
+                            <a class="mob-mock-a"><img id="mobMock" class="mob-pos-mock-8 mob-mock" onclick="mob_mockup_click(8)"src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKติดเชื้อ.png"></a>
+                            <a class="mob-mock-a"><img id="mobMock" class="mob-pos-mock-9 mob-mock" onclick="mob_mockup_click(9)"src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/ถังสี.png"></a>
+                            <a class="mob-mock-a"><img id="mobMock" class="mob-pos-mock-10 mob-mock" onclick="mob_mockup_click(10)"src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/ก๊าซภายใต้ความดัน.png"></a>
+                        </div>
                     <div class="mock-container">
                         <a><img id="mock" class="item-danger pos-mock-1" onmouseover="tooltip_active(0)" onmouseout="tooltip_reset()" onclick="mockup_click(0)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKระวัง.png"></a>
                         <a><img id="mock" class="item-danger pos-mock-2" onmouseover="tooltip_active(1)" onmouseout="tooltip_reset()" onclick="mockup_click(1)" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/MOCKกัดกร่อน.png"></a>
@@ -126,17 +137,17 @@
                     
             </div>
             <div class="pos-arrowCenter" style="bottom: 5vh;">
-                <a href="#section-nm-1" class="arrow down" style="z-index: 1;"><img src="./img/chevron-down.svg" class="pos-mainpage arrowImg"></a>
+                <a href="#section-nm-1-p2" class="arrow down" style="z-index: 1;"><img src="./img/chevron-down.svg" class="pos-mainpage arrowImg"></a>
             </div>
         </section>
 
-        <section id="section-nm-1" style="margin-bottom: 20vw;">
-            <div class="grid-parent-col2">
-                <div class="span-1 flex-right-parent">
+        <section id="section-nm-1-p2" style="margin-bottom: 20vw;">
+            <div class="grid-parent-col2 mob-grid-parent-col2">
+                <div class="span-1 flex-right-parent mob-span-2 mob-flex-center-parent">
                     <img id="the-girl" class="img-sm" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/หญิง.PNG" alt="the-girl">
                 </div>
-                <div class="span-1 flex-left-parent">
-                    <div>
+                <div class="span-1 flex-left-parent mob-span-2 mob-flex-center-parent">
+                    <div class="mob-center-text">
                         <h1 id="description" class="description des-header-big">จะเป็นอะไรไหม?</h1>
                         <h1 id="description" class="sub-description" style="margin: 0;">ถ้าหากอยู่กับสารพิษเหล่านี้เป็นเวลานาน</h1>
                     </div>
@@ -145,12 +156,13 @@
         </section>
 
         <section class="long-section">
-            <div class="grid-parent-col2">
-                <div class="span-1 flex-left-parent container-img-long">
+            <div class="grid-parent-col2 mob-grid-parent-col2">
+                <div class="span-1 flex-left-parent container-img-long mob-span-2 mob-flex-center-parent">
                     <img class="img-long2" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/หุ่น-nm2.PNG">
                     <img class="img-long1" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/resize/หุ่น-nm.PNG">
+                    <img class="model" src="./CA/ขวดสัญลักษณ์ต่างๆ-ของอันตรายใกล้ตัว/หุ่น.PNG">
                 </div>
-                <div class="span-1 flex-center-parent2" style="position: relative;">
+                <div class="span-1 flex-center-parent2 mob-span-2" style="position: relative;">
                     <div class="des-long-container">
                         <div class="long-des">
                             <h1 id="description" class="description" >ผลต่อ<span id="highlight">ตา</span></h1>

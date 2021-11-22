@@ -20,9 +20,6 @@
     <script src="./jsscript.js"></script>
 </head>
 <body onload="" id="body"> <!--onload="loading_Function()"-->
-    <div id="post">
-        Y = <span id="yyy">0</span>
-    </div>
     <!--<div id="loading-sc"> 
 
     </div>-->
@@ -57,9 +54,12 @@
 
         <section class="flex-top_down-parent" id="section-main-info">
             <div class="sub-container">
-                <h1 class="des-header-big">แยกของอันตรายด้วยมือเรา</h1>
-                <p id="des-para-big">สามารถจัดเก็บของอันตรายได้ด้วยตัวเอง ดังนี้</p>
-                <h1 id="des-click" class="click active">ลองคลิกที่สิ่งของทางด้านขวาดูสิ!</h1>
+                <div class="mob-sub-container">
+                    <h1 class="des-header-big">แยกของอันตรายด้วยมือเรา</h1>
+                    <p id="des-para-big">สามารถจัดเก็บของอันตรายได้ด้วยตัวเอง ดังนี้</p>
+                    <h1 id="des-click" class="click active">ลองคลิกดูที่สิ่งของด้านขวาสิ !</h1>
+                </div>
+                <h1 id="mob-click" class="mob-click active">ลองคลิกแล้วเลื่อนดูที่สิ่งของด้านล่างสิ !</h1>
                 <div id="text-container">
                     <div id="thing-box" class="thing-box">
                         <img class="thing-sign" src="./CA/ตราสัญลักษณ์/ต้องระวัง.png">
@@ -91,6 +91,22 @@
                     <p id="mock-info-para" class="text-para" style="padding-right: 55vw; margin: 5px 0;"></p>
                     <h1 id="mock-info-header2" class="text-header2" style="margin-top: 20px; margin-bottom: 10px;"></h1>
                     <p id="mock-info-para2" class="text-para" style="padding-right: 55vw; margin: 5px 0;"></p>
+                    <div class="mob-thing-info-container">
+                        <h1 id="mob-mock-info-header" class="mob-text-header"></h1>
+                        <p id="mob-mock-info-para" style="padding-right: 20vw;"></p>
+                        <h1 id="mob-mock-info-header2" class="mob-text-header"></h1>
+                        <p id="mob-mock-info-para2" style="padding-right: 20vw;"></p>
+                    </div>
+                </div>
+                <div class="mob-thing-container">
+                    <a class="mob-mock-a"><img id="mobMock" class="mob-thing-mock-1 mob-mock" onclick="mob_thing_click(1)" src="./CA/แยกของอันตราย/สเปรย์.PNG"></a>
+                    <a class="mob-mock-a"><img id="mobMock" class="mob-thing-mock-2 mob-mock" onclick="mob_thing_click(2)" src="./CA/แยกของอันตราย/น้ำมัน+ลิควิด.png"></a>
+                    <a class="mob-mock-a"><img id="mobMock" class="mob-thing-mock-3 mob-mock" onclick="mob_thing_click(3)" src="./CA/แยกของอันตราย/ยา.png"></a>
+                    <a class="mob-mock-a"><img id="mobMock" class="mob-thing-mock-4 mob-mock" onclick="mob_thing_click(4)" src="./CA/แยกของอันตราย/หลอดไฟ.PNG"></a>
+                    <a class="mob-mock-a"><img id="mobMock" class="mob-thing-mock-5 mob-mock" onclick="mob_thing_click(5)" src="./CA/แยกของอันตราย/ถ่าน.PNG"></a>
+                    <a class="mob-mock-a"><img id="mobMock" class="mob-thing-mock-6 mob-mock" onclick="mob_thing_click(6)" src="./CA/แยกของอันตราย/แมส.PNG"></a>
+                    <a class="mob-mock-a"><img id="mobMock" class="mob-thing-mock-7 mob-mock" onclick="mob_thing_click(7)" src="./CA/แยกของอันตราย/ปรอท.png"></a>
+                    <a class="mob-mock-a"><img id="mobMock" class="mob-thing-mock-8 mob-mock" onclick="mob_thing_click(8)" src="./CA/แยกของอันตราย/เซ็ทมีคม.png"></a>
                 </div>
                     <div class="mock-container">
                         <a><img id="thing" class="item-danger pos-thing-1"onmouseover="tooltip_active(0)" onmouseout="tooltip_reset()" onclick="things_click(0)" src="./CA/แยกของอันตราย/สเปรย์.PNG"></a>
