@@ -239,8 +239,8 @@ li {
 }
 
 .flex-right-parent {
-	display: -webkit-flex;
-	-webkit-justify-content: end;
+	display: flex;
+	justify-content: end;
 	align-items: center;
 }
 
