@@ -2186,7 +2186,7 @@ img.pos-mock-10{
 
 	.mob-nav-logo{
 		width: 100%; display: -webkit-flex; -webkit-justify-content: end;
-		justify-content: end;
+		justify-content: end; display: flex;
 	}
 
 	.mob-sub-container{
@@ -2194,6 +2194,7 @@ img.pos-mock-10{
 	}
 
 	.mob-flex-center-parent{
+		display: flex;
 		display: -webkit-flex;
 		-webkit-justify-content: center;
 		justify-content: center;
@@ -2294,6 +2295,7 @@ img.pos-mock-10{
 	}
 	.mach-bt{
 		align-items: end;
+		justify-content: center;
 		-webkit-justify-content: center;
 	}
 	.dust-sec{
@@ -2313,6 +2315,7 @@ img.pos-mock-10{
 		color: #FD2D2D;
 	}
 	.mob-mock-a{
+		align-self: end;
 		-webkit-align-self: end;
 		scroll-snap-align: center;
 	}
