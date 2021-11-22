@@ -16,6 +16,17 @@
 a{
 	cursor: pointer;
 }
+.credit{
+	width: 100%;
+	height: auto;
+	padding: 1vh 0;
+	text-align: center;
+	color: #FD2D2D;
+}
+.credit p{
+	font-size: 0.9vw;
+	padding: 0 26vw;
+}
 .pause {
     animation-play-state: paused;
 }
@@ -155,7 +166,7 @@ li {
 
 .header {
 	display: flex;
-	justify-content: space-evenly;
+	-webkit-justify-content: space-evenly;
 	align-items: center;
 	position: absolute;
 }
@@ -235,7 +246,7 @@ li {
 
 .flex-center-parent {
 	display: flex;
-	justify-content: center;
+	-webkit-justify-content: center;
 	align-items: center;
 	text-align: center;
 }
@@ -247,13 +258,13 @@ li {
 
 .flex-left-parent {
 	display: flex;
-	justify-content: start;
+	-webkit-justify-content: start;
 	align-items: center;
 }
 
 .flex-right-parent {
 	display: flex;
-	justify-content: end;
+	-webkit-justify-content: end;
 	align-items: center;
 }
 
@@ -650,7 +661,7 @@ footer {
 
 .sec-description-right {
 	display: flex;
-	justify-content: end;
+	-webkit-justify-content: end;
 	align-items: end;
 }
 
@@ -1145,7 +1156,7 @@ img.pos-mock-10{
 .pos-arrowCenter{
 	position: absolute;
 	width: 100%;
-	display: flex; align-items: center; justify-content: center;
+	display: -webkit-flex; align-items: center; -webkit-justify-content: center;
 }
 .pos-arrowD-main{
 	position: absolute;
@@ -1156,12 +1167,12 @@ img.pos-mock-10{
 .pos-arrowRight{
 	position: absolute;
 	width: 100%;
-	display: flex; -webkit-align-items: end; -webkit-justify-content: end;
+	display: -webkit-flex; -webkit-align-items: end; -webkit-justify-content: end;
 }
 .pos-arrowLeft{
 	position: absolute;
 	width: 100%;
-	display: flex; align-items: start; justify-content: start;
+	display: -webkit-flex; align-items: start; -webkit-justify-content: start;
 }
 .arrow p{
 	margin: 0;
@@ -1195,7 +1206,7 @@ img.pos-mock-10{
 	cursor: pointer;
 	animation: arrowLeftOut 1.5s;
 	animation-fill-mode: forwards;
-	display: flex; align-items: center;
+	display: -webkit-flex; align-items: center;
 }
 .arrow.left:hover{
 	animation: arrowLeftIn 1.5s;
@@ -1206,7 +1217,7 @@ img.pos-mock-10{
 	cursor: pointer;
 	animation: arrowRightOut 1.5s;
 	animation-fill-mode: forwards;
-	display: flex; align-items: center;
+	display: -webkit-flex; align-items: center;
 }
 .arrow.right:hover{
 	animation: arrowRightIn 1.5s;
@@ -1624,7 +1635,7 @@ img.pos-mock-10{
 		text-align: center;
 		padding: 0 25vw;
 		position: absolute;
-		display: flex;
+		display: -webkit-flex;
 	}
 	.mock-container{
 		visibility: hidden;
@@ -1714,8 +1725,8 @@ img.pos-mock-10{
 	}
 	.heart-sub-containner{
 		padding: 0;
-		display: flex;
-		justify-content: center;
+		display: -webkit-flex;
+		-webkit-justify-content: center;
 	}
 	#mini-logo-sm{
 		width: 35px;
@@ -1727,7 +1738,7 @@ img.pos-mock-10{
 	}
 
 	.header{
-		justify-content: space-between;
+		-webkit-justify-content: space-between;
 	}
 
 	.gamebtn{
@@ -1747,8 +1758,8 @@ img.pos-mock-10{
 	}
 
 	.sub-des-top{
-		display: flex;
-		justify-content: center;
+		display: -webkit-flex;
+		-webkit-justify-content: center;
 		align-items: start;
 	}
 
@@ -1756,7 +1767,7 @@ img.pos-mock-10{
 		left: 0;
 	}
 	.des-center{
-		justify-content: center;
+		-webkit-justify-content: center;
 	}
 	.des-header-big{
 		font-size: max(29px, 2.1vw);
@@ -2170,8 +2181,8 @@ img.pos-mock-10{
 	}
 
 	.mob-flex-center-parent{
-		display: flex;
-		justify-content: center;
+		display: -webkit-flex;
+		-webkit-justify-content: center;
 		align-items: center;
 	}
 
@@ -2243,7 +2254,7 @@ img.pos-mock-10{
 		height: 38vh;
 		width: auto;
 		background-color: #222222;
-		display: flex;
+		display: -webkit-flex;
 		scroll-snap-type: mandatory;
 		scroll-snap-points-x: repeat(300px);
 		scroll-snap-type: x mandatory;
@@ -2254,7 +2265,7 @@ img.pos-mock-10{
 		height: 28vh;
 		width: auto;
 		background-color: #222222;
-		display: flex;
+		display: -webkit-flex;
 		scroll-snap-type: mandatory;
 		scroll-snap-points-x: repeat(300px);
 		scroll-snap-type: x mandatory;
@@ -2264,11 +2275,11 @@ img.pos-mock-10{
 	}
 	.mach-top{
 		align-items: start;
-		justify-content: center;
+		-webkit-justify-content: center;
 	}
 	.mach-bt{
 		align-items: end;
-		justify-content: center;
+		-webkit-justify-content: center;
 	}
 	.dust-sec{
 		height: 80%;
@@ -2356,5 +2367,9 @@ img.pos-mock-10{
 		top: 0;
 		right: 0;
 		animation: none;
+	}
+	.credit p{
+		font-size: x-small;
+		padding: 0 3vw;
 	}
   }
