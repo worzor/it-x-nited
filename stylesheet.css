@@ -166,6 +166,7 @@ li {
 
 .header {
 	display: flex;
+	justify-content: space-evenly;
 	-webkit-justify-content: space-evenly;
 	align-items: center;
 	position: absolute;
@@ -246,6 +247,7 @@ li {
 
 .flex-center-parent {
 	display: flex;
+	justify-content: center;
 	-webkit-justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -258,12 +260,14 @@ li {
 
 .flex-left-parent {
 	display: flex;
+	justify-content: start;
 	-webkit-justify-content: start;
 	align-items: center;
 }
 
 .flex-right-parent {
 	display: flex;
+	justify-content: end;
 	-webkit-justify-content: end;
 	align-items: center;
 }
@@ -661,6 +665,7 @@ footer {
 
 .sec-description-right {
 	display: flex;
+	justify-content: end;
 	-webkit-justify-content: end;
 	align-items: end;
 }
@@ -1157,6 +1162,7 @@ img.pos-mock-10{
 	position: absolute;
 	width: 100%;
 	display: -webkit-flex; align-items: center; -webkit-justify-content: center;
+	justify-content: center;
 }
 .pos-arrowD-main{
 	position: absolute;
@@ -1168,11 +1174,13 @@ img.pos-mock-10{
 	position: absolute;
 	width: 100%;
 	display: -webkit-flex; -webkit-align-items: end; -webkit-justify-content: end;
+	justify-content: end; align-items: end;
 }
 .pos-arrowLeft{
 	position: absolute;
 	width: 100%;
 	display: -webkit-flex; align-items: start; -webkit-justify-content: start;
+	justify-content: start;
 }
 .arrow p{
 	margin: 0;
@@ -1727,6 +1735,7 @@ img.pos-mock-10{
 		padding: 0;
 		display: -webkit-flex;
 		-webkit-justify-content: center;
+		justify-content: center;
 	}
 	#mini-logo-sm{
 		width: 35px;
@@ -1739,6 +1748,7 @@ img.pos-mock-10{
 
 	.header{
 		-webkit-justify-content: space-between;
+		justify-content: space-between;
 	}
 
 	.gamebtn{
@@ -1760,6 +1770,7 @@ img.pos-mock-10{
 	.sub-des-top{
 		display: -webkit-flex;
 		-webkit-justify-content: center;
+		justify-content: center;
 		align-items: start;
 	}
 
@@ -1768,6 +1779,7 @@ img.pos-mock-10{
 	}
 	.des-center{
 		-webkit-justify-content: center;
+		justify-content: center;
 	}
 	.des-header-big{
 		font-size: max(29px, 2.1vw);
@@ -2174,6 +2186,7 @@ img.pos-mock-10{
 
 	.mob-nav-logo{
 		width: 100%; display: -webkit-flex; -webkit-justify-content: end;
+		justify-content: end;
 	}
 
 	.mob-sub-container{
@@ -2183,6 +2196,7 @@ img.pos-mock-10{
 	.mob-flex-center-parent{
 		display: -webkit-flex;
 		-webkit-justify-content: center;
+		justify-content: center;
 		align-items: center;
 	}
 
@@ -2275,6 +2289,7 @@ img.pos-mock-10{
 	}
 	.mach-top{
 		align-items: start;
+		justify-content: center;
 		-webkit-justify-content: center;
 	}
 	.mach-bt{
