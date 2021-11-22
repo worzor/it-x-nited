@@ -102,6 +102,19 @@ body {
 	font-family: "Kanit", sans-serif;
 	overflow-x: hidden;
 }
+/*ScrollBar*/
+body::-webkit-scrollbar {
+	width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+body::-webkit-scrollbar-thumb {
+	background-color: #FD2D2D;
+	outline: 1px solid #222222;
+}
 
 .container {
 	width: 100%;
@@ -1392,7 +1405,7 @@ img.pos-mock-10{
 	position: absolute;
 	width: 30vw;
 	right: -100px;
-	top: -100px;
+	top: -180px;
 	transform-origin: top right;
 	animation: armAnimation 1s;
 	animation-fill-mode: forwards;
@@ -1447,6 +1460,10 @@ img.pos-mock-10{
 
 /*สำหรับ mac*/
 @media (max-width: 1280px){
+	.armAnim{
+		right: -100px;
+		top: -100px;
+	}
 	.text-para{
 		font-size: 1.2vw;
 	}
@@ -2010,92 +2027,92 @@ img.pos-mock-10{
 	}
 
 	.mob-pos-mock-1{
-		width: 25vw;
+		width: 12vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-pos-mock-2{
-		width: 27vw;
+		width: 13vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-pos-mock-3{
-		width: 38vw;
+		width: 18vh; /*-13*/
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-pos-mock-4{
-		width: 22vw;
+		width: 10vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-pos-mock-5{
-		width: 30vw;
+		width: 13vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-pos-mock-6{
-		width: 22vw;
+		width: 10vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-pos-mock-7{
-		width: 35vw;
+		width: 15vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-pos-mock-8{
-		width: 55vw;
+		width: 25vh;
 		padding: 5vw 5vw;
 		padding-bottom: 5vw;
 	}
 	.mob-pos-mock-9{
-		width: 45vw;
+		width: 20vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-pos-mock-10{
-		width: 22vw;
+		width: 10vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-thing-mock-1{
-		width: 13vw;
+		width: 6vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-thing-mock-2{
-		width: 30vw;
+		width: 14vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-thing-mock-3{
-		width: 33vw;
+		width: 16vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-thing-mock-4{
-		width: 28vw;
+		width: 12vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-thing-mock-5{
-		width: 25vw;
+		width: 10vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-thing-mock-6{
-		width: 60vw;
+		width: 28vh;
 		padding: 0 5vw;
 		padding-bottom: 5vw;
 	}
 	.mob-thing-mock-7{
-		width: 8vw;
+		width: 3.5vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
 	.mob-thing-mock-8{
-		width: 57vw;
+		width: 25vh;
 		padding: 0 10vw;
 		padding-bottom: 5vw;
 	}
