@@ -1613,6 +1613,7 @@ img.pos-mock-10{
 
 /*สำหรับ mobile*/
 @media (max-width: 768px) {
+
 	.pos-arrowCenter.main{
 		top: -100px;
 	}
@@ -1874,6 +1875,8 @@ img.pos-mock-10{
 		visibility: hidden;
 	}
 	.arrow.right{
+		position: absolute;
+		right: 0;
 		padding-right: 5vw;
 	}
 	.align-start{
@@ -2355,7 +2358,7 @@ img.pos-mock-10{
 		height: 270vh;
 	}
 	footer{
-		height: 75px;
+		height: 20px;
 		margin-top: 50px;
 	}
 	.img-sign, .img-sign.active{
