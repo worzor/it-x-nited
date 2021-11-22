@@ -2298,7 +2298,7 @@ img.pos-mock-10{
 		color: #FD2D2D;
 	}
 	.mob-mock-a{
-		align-self: end;
+		-webkit-align-self: end;
 		scroll-snap-align: center;
 	}
 	.mob-center-text{
