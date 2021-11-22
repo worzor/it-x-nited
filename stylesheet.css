@@ -2185,8 +2185,8 @@ img.pos-mock-10{
 	}
 
 	.mob-nav-logo{
-		width: 100%; display: -webkit-flex; -webkit-justify-content: end;
-		justify-content: end; display: flex;
+		display: -webkit-flex; -webkit-justify-content: end;
+		justify-content: end; display: flex; width: 100%;
 	}
 
 	.mob-sub-container{
