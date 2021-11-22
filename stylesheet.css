@@ -240,7 +240,7 @@ li {
 
 .flex-right-parent {
 	display: -webkit-flex;
-	justify-content: end;
+	-webkit-justify-content: end;
 	align-items: center;
 }
 
