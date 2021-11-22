@@ -1594,7 +1594,7 @@ img.pos-mock-10{
 	}
 	.border-bt-game{
 		border-bottom: 1px solid #FD2D2D; position: absolute; width: 80%; margin: 0 10vw;
-		bottom: 41vh;
+		bottom: 330px; z-index: -1;
 	}
 	.nav-logo-img{
 		width: 50px;
@@ -1905,7 +1905,9 @@ img.pos-mock-10{
 		object-fit: cover;
 		width: 90%;
 	}
-
+	section.game{
+		height: 812px;
+	}
 	.pos-game-1{
 		width: 15vw;
 		left: 41vw;
