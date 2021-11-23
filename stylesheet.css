@@ -365,7 +365,7 @@ footer {
 	margin-top: 100px;
 	height: 100px;
 	width: 100%;
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 }
 
 .game-area{
@@ -435,7 +435,7 @@ footer {
 
 .img-el.active{
 	opacity: 100%;
-	transition: 2s;
+	transition: 1s;
 }
 
 .thing-sign{
@@ -542,7 +542,7 @@ footer {
 	z-index: -1;
 	top: 0;
 	left: 0;
-	animation: highlight-anim 2s;
+	animation: highlight-anim 1s;
 	animation-fill-mode: forwards;
 }
 .mob-click.active{
@@ -556,8 +556,8 @@ footer {
 
 .description.active{
 	opacity: 100%;
-	transition: 2s;
-	animation: des-transform 2s;
+	transition: 0.5s;
+	animation: des-transform 1s;
 	animation-fill-mode: forwards;
 }
 
@@ -567,8 +567,8 @@ footer {
 
 .sub-description.active{
 	opacity: 100%;
-	transition: 2s;
-	animation: des-transform 2.5s;
+	transition: 0.9s;
+	animation: des-transform 1.5s;
 	animation-fill-mode: forwards;
 }
 
@@ -1665,13 +1665,13 @@ img.pos-mock-10{
 		right: 0;*/
 		background-color: #1a1919; position: fixed; height: 100vh; top: 0; width: 100%; z-index: 999;
 		right: -110%;
-		transition: 1s;
+		transition: 0.2s;
 	}
 	.mini-nav-bar.active{
 		/*animation: nav-active 1s;
 		animation-fill-mode: forwards;*/
 		right: 0;
-		transition: 1s;
+		transition: 0.2s;
 
 	}
 	.mini-nav-bar p{
@@ -1869,6 +1869,8 @@ img.pos-mock-10{
 	}
 	.arrow.left{
 		padding-left: 5vw;
+		position: absolute;
+		left: 0;
 	}
 	.time_stm{
 		visibility: hidden;
@@ -1877,6 +1879,7 @@ img.pos-mock-10{
 		position: absolute;
 		right: 0;
 		padding-right: 5vw;
+		top: 0;
 	}
 	.align-start{
 		align-items: start;

@@ -25,6 +25,10 @@ function select2(item){
         }
     }
 }
+
+var correct = new Audio("./sound/correctSound.mp3");
+var wrong = new Audio("./sound/wrongSound.mp3");
+var congratulations = new Audio("./sound/congratulations.mp3");
 var fail_counter = 0;
 var success_counter = 0;
 function gameResultCheck(){
@@ -33,6 +37,7 @@ function gameResultCheck(){
     var heartAll = document.querySelectorAll("#heart");
     if(item1 != 0 && item2 != 0){
         if(item1 == item2){
+            correct.play();
             console.log("correct!");
             All_item1[item1-1].classList.add("hidden");
             All_item2[item2-1].classList.add("hidden");
@@ -45,6 +50,7 @@ function gameResultCheck(){
             }
         }
         else{
+            wrong.play();
             console.log("not correct!");
             if(fail_counter == 0){
                 heartAll[2].classList.remove("active");
