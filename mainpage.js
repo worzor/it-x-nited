@@ -4,12 +4,10 @@ function parallax() {
         let _h = window.innerHeight;
         let newY = window.scrollY;
 
-        console.log(_h)
         let _depth1 = `${100+(newY - _w) * 0.12}px ${40+(newY - _h) * 0.05}px`;
         let _depth2 = `${50+(newY - _w) * 0.07}px ${(newY - _h) * 0.01}px`;
         let _depth3 = `${(newY - _w) * 0.01}px`;
         let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-        console.log(x)
         elem.style.backgroundPosition = x;
 }
 
