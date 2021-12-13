@@ -95,13 +95,11 @@ html {
 header .main {
 	position: absolute;
 	width: 100%;
-	margin-top: 20px;
 	z-index: 999;
 }
 
 header .normal {
 	width: 100%;
-	margin-top: 20px;
 }
 .header{
 	z-index: 999;
@@ -136,7 +134,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #loading-sc {
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 	background-image: url("./CA/GIF.gif");
 	background-size: 100% 100%;
@@ -1613,7 +1611,9 @@ img.pos-mock-10{
 
 /*สำหรับ mobile*/
 @media (max-width: 768px) {
-
+	header .normal {
+		margin-top: 20px;
+	}
 	.pos-arrowCenter.main{
 		top: -100px;
 	}

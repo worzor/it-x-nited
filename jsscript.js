@@ -23,6 +23,7 @@ function onscrollFunction(page) {
     trigger_AllBar();
 };
 
+
 function trigger_AllBar(){ /*Function ใหญ่ที่จะ Trigger ทุก element ที่จะไป call function ย่อยอีกที*/
     let All_bar = document.querySelectorAll("#highlight");
     let All_el = document.querySelectorAll("#element");
@@ -210,7 +211,7 @@ function loading_Function() {
   
 function showPage() {
     document.getElementById("loading-sc").style.display = "none";
-    document.getElementById("site-body").style.display = "block";
+    document.body.style.overflowY = "auto";
 }
 
 function tooltip_active(tools){
