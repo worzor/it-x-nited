@@ -20,10 +20,10 @@
     <script src="./jsscript.js"></script>
     <script src="./mainpage.js"></script>
     
-<body id="body" onscroll="onscrollFunction(1), parallax()" onload="loading_Function()" style="overflow-y: hidden;"> 
-    <div id="loading-sc" style="position:fixed; z-index: 1000;">
+<body id="body" onscroll="onscrollFunction(1), parallax()"  style="overflow-y: auto;"> <!--onload="loading_Function()"-->
+    <!--<div id="loading-sc" style="position:fixed; z-index: 1000;">
 
-    </div>
+    </div>-->
     <header>
         <div class="header normal">
             <div class="nav-left">
@@ -57,6 +57,9 @@
         <div class="pos-arrowD-main arrow down">
             <a href="#section-nm-1"><img src="./img/chevron-down.svg" class="pos-mainpage arrowImg"></a>
         </div>
+
+        <a href="#section-main"><img src="./img/chevron-up.svg" id="backarrow" class="pos-mainpage arrowImg" style="position: fixed; bottom: 10vh; right: 6vw; opacity: 0; z-index: 999; transition: 0.5s;"></a>
+
         <div id="section-main" class="section-main parallax">
             <img class="img-fit mob-main-img" src="./CA/รูปหน้าhome/หน้าหลัก.png" alt="main-logo">
         </div>
@@ -130,11 +133,11 @@
             <div class="grid-parent-col2 mob-grid-parent-col2">
                 <div class="span-2 flex-center-parent">
                     <h1 id="description" class="description"><span id="highlight">ในหนึ่งวัน</span><br>
-                        เจอ<span id="highlight">ความเสี่ยงอะ</span>ไรบ้าง</h1>
+                        เจอ<span id="highlight">ความเสี่ยงอะ</span>ไรบ้าง?</h1>
                 </div>
                 <div class="span-1 flex-right-parent mob-span-2 des-center align-start">
                     <div class="sec-description-right des-track1">
-                        <p id="description" class="sub-description">เสี่ยงติดเชื้อโรค จากพวกเข็มฉีดยา หน้ากากอนามัย กับของแหลมคม ต้องเจอปัญหาด้านสุขภาพ โรคทางเดินหายใจจากพิษของสารเคมีที่ติดมากับขยะ</p>
+                        <p id="description" class="sub-description"><span class="ans">“เสี่ยงติดเชื้อโรค</span> จากพวกเข็มฉีดยา หน้ากากอนามัย กับของแหลมคม ต้องเจอปัญหาด้านสุขภาพ โรคทางเดินหายใจจากพิษของสารเคมีที่ติดมากับขยะ”<br><span class="ansname">นาย ธาดา พร้อมมูล ตอบ</span></p>
                     </div>
                 </div>
                 <div class="span-1 flex-right-parent mob-span-2 align-start">
@@ -146,7 +149,7 @@
         <section id="section-nm-5">
             <div class="sec-description">
                 <h1 id="description" class="description head-mob" style="text-align: center;"><span id="highlight">ปลายทางสุดท้าย</span>ของ<br>
-                    <span id="highlight">ขยะที่ไม่ได้รีไซเคิล</span>คือที่ไหน</h1>
+                    <span id="highlight">ขยะที่ไม่ได้รีไซเคิล</span>คือที่ไหน?</h1>
             </div>
             <div class="grid-parent-col2 mob-grid-parent-col2 mob-sec-garbage">
                 <div class="span-1 flex-left-parent mob-span-2">
@@ -155,9 +158,9 @@
                 <div class="span-1 flex-left-parent mob-span-2">
                     <div class="sec-description des-garbage">
                         <h1 id="description" class="description head-nr"><span id="highlight">ปลายทางสุดท้าย</span>ของ<br>
-                            <span id="highlight">ขยะที่ไม่ได้รีไซเคิล</span>คือที่ไหน</h1>
-                        <p id="description" class="sub-description">บ่อขยะ เพราะไม่ได้ผ่านการคัดแยกที่ถูกต้อง <br>
-                            ทุกอย่างเลยมากองรวมกันที่ภูเขาขยะ </p>
+                            <span id="highlight">ขยะที่ไม่ได้รีไซเคิล</span>คือที่ไหน?</h1>
+                        <p id="description" class="sub-description"><span class="ans">“บ่อขยะ</span> เพราะไม่ได้ผ่านการคัดแยกที่ถูกต้อง<br>
+                            ทุกอย่างเลยมากองรวมกันที่ภูเขาขยะ”<br><span class="ansname">นาย ธาดา พร้อมมูล ตอบ</span></p>
                     </div>
                 </div>
             </div>
@@ -168,9 +171,9 @@
                 <div class="span-1 flex-right-parent mob-span-2 mach-bt">
                     <div class="sec-description sec-des-mach">
                         <h1 id="description" class="description"><span id="highlight">การจัดการ</span>ของบ่อขยะเป็นยังไง</h1>
-                        <p id="description" class="sub-description mach-sub-des">มีการเปิดให้ชาวบ้านแถวนั้นมาเก็บขยะของเก่าไปขาย บ่อบางแห่งก็มี <br>
+                        <p id="description" class="sub-description mach-sub-des">“มีการเปิดให้ชาวบ้านแถวนั้นมาเก็บขยะของเก่าไปขาย บ่อบางแห่งก็มี <br>
                             การคัดแยกขยะกันอีกทีร่อนขยะอินทรีย์เอาไปทำปุ๋ย ถ้ากำจัดขยะอย่าง <br>
-                            ถูกวิธีก็สามารถนำกลับมาใช้เป็นพลังงานได้ </p>
+                            ถูกวิธีก็สามารถนำกลับมาใช้เป็นพลังงานได้”<br><span class="ansname">นาย ธาดา พร้อมมูล ตอบ</span></p>
                     </div>
                 </div>
                 <div class="span-1 flex-right-parent img-comment mob-span-2 mach-top">
@@ -181,9 +184,9 @@
                 </div>
                 <div class="span-1 flex-right-parent mob-span-2 mach-top">
                     <div class="sec-description" style="padding: 0px 9vw 0px 9vw;">
-                        <p id="description" class="sub-description nr-mach-sub-des">มีการเปิดให้ชาวบ้านแถวนั้นมาเก็บขยะของเก่าไปขาย บ่อบางแห่งก็มี
+                        <p id="description" class="sub-description nr-mach-sub-des">“มีการเปิดให้ชาวบ้านแถวนั้นมาเก็บขยะของเก่าไปขาย บ่อบางแห่งก็มี
                             การคัดแยกขยะกันอีกทีร่อนขยะอินทรีย์เอาไปทำปุ๋ย ถ้ากำจัดขยะอย่าง
-                            ถูกวิธีก็สามารถนำกลับมาใช้เป็นพลังงานได้ </p>
+                            ถูกวิธีก็สามารถนำกลับมาใช้เป็นพลังงานได้”</p>
                     </div>
                 </div>
             </div>
@@ -208,11 +211,10 @@
                 <div class="span-1 flex-left-parent mob-span-2 mob-flex-center-parent">
                     <div class="sec-description" id="dustman-des">
                         <h1 id="description" class="description head-nr">สิ่งที่<span id="highlight">เลวร้ายที่สุด</span>คืออะไร?</h1>
-                        <p id="description" class="sub-description dust-des">เคยมีพนักงานคนใหม่มาทำงานฟันแฟลต 
+                        <p id="description" class="sub-description dust-des">“เคยมีพนักงานคนใหม่มาทำงานฟันแฟลต 
                             (การเก็บขยะเน่าเสียตามปล่องทิ้งขยะที่รถ 
                             ไม่สามารถเข้าไปเก็บได้) วันแรกก็ลาออกเลย 
-                            เพราะคุณภาพชีวิตที่ย่ำแย่ที่เป็นผลพวงจากการ 
-                            ไม่แยกขยะของคนไทย</p>
+                            เพราะคุณภาพชีวิตที่ย่ำแย่ที่เป็นผลพวงจาก<span class="ans">การไม่แยกขยะของคนไทย”</span><br><span class="ansname">นาย ศักดิ์เจริญ แย้มบู่ ตอบ</span></p>
                     </div>
                 </div>
             </div>
@@ -236,14 +238,14 @@
             </div>
             <div class="grid-parent-col2">
                 <div class="span-2 flex-center-parent">
-                    <h1 id="description" class="description dust-head">เก็บขยะ<span id="highlight">หนึ่งวัน</span>ใช้เวลากี่<span id="highlight">ชั่วโมง</span></h1>
+                    <h1 id="description" class="description dust-head">เก็บขยะ<span id="highlight">หนึ่งวัน</span>ใช้เวลากี่<span id="highlight">ชั่วโมง?</span></h1>
                 </div>
                 <div class="span-2 flex-center-parent">
                     <img id="element" class="img-nr-3 img-el" src="./CA/รูปหน้าhome/คนเก็บ-2.PNG" alt="dustman-2">
                 </div>
                 <div class="span-2 flex-center-parent">
-                    <p id="description" class="sub-description">6-10 ชั่วโมง <br>
-                        โดยไม่พักจนกว่าจะเก็บขยะในพื้นที่รับผิดชอบจนหมด</p>
+                    <p id="description" class="sub-description"><span class="ans">“6-10 ชั่วโมง</span> <br>
+                        โดยไม่พักจนกว่าจะเก็บขยะในพื้นที่รับผิดชอบจนหมด”<br><span class="ansname">นาย ศักดิ์เจริญ แย้มบู่ ตอบ</span></p>
                 </div>
             </div>
         </section>
@@ -258,10 +260,10 @@
                 </div>
                 <div class="span-1 flex-left-parent mob-span-2">
                     <div class="sec-description dust3-des">
-                        <p id="description" class="sub-description">ช่วยกันคัดแยกขยะให้ถูกวิธี ทิ้งขยะให้เป็นที่
+                        <p id="description" class="sub-description"><span class="ans">“ช่วยกันคัดแยกขยะให้ถูกวิธี </span>ทิ้งขยะให้เป็นที่
                             และลดขยะด้วยตัวคุณเอง ถุงพลาสติกที่
                             สามารถนำกลับมาใช้ใหม่ก็เอาไปใช้ใหม่
-                            บ้านเมืองเราต้องช่วยกันรักษาความสะอาด</p>
+                            บ้านเมืองเราต้องช่วยกันรักษาความสะอาด”<br><span class="ansname">นาย ศักดิ์เจริญ แย้มบู่ ตอบ</span></p>
                     </div>
                 </div>
             </div>
@@ -269,13 +271,14 @@
 
         <footer>
             <div class="pos-arrowCenter main">
-                <a href="#section-main" class="arrow up" style="z-index: 1;"><img src="./img/chevron-up.svg" class="pos-mainpage arrowImg"><p>กลับขึ้นด้านบน</p></a>
-            </div>
-            <div class="pos-arrowRight">
-                <a href="./dangerous_thing_nearby.html" class="arrow right"><p>ของอันตรายใกล้ตัว</p><img src="./img/chevron-right.svg" class="pos-mainpage arrowImg"></a>
+                <a href="./dangerous_thing_nearby.html" class="arrow right mob-center-ar" style="padding-right:0;"><p>ของอันตรายใกล้ตัว</p><img src="./img/chevron-right.svg" class="pos-mainpage arrowImg"></a>
             </div>
         </footer>
-        <div class="credit"> <p>โปรเจกต์เว็บไซต์นี้เป็นส่วนหนึ่งของวิชาออกแบบเว็บไซต์ คณะสถาปัตยกรรรม ศิลปะและการออกแบบ
+        <div class="credit" style="display: flex;"> 
+            <img class="credit-img" src="./img/kmitl_logo_desktop.png">
+            <img class="credit-img" src="./img/Logo_Arch.png">
+            <img class="credit-img" src="./img/Logo_IT.png">
+            <p>โปรเจกต์เว็บไซต์นี้เป็นส่วนหนึ่งของวิชาออกแบบเว็บไซต์ คณะสถาปัตยกรรรม ศิลปะและการออกแบบ
             วิชาการโปรแกรมและสื่อประสม คณะเทคโนโลยีสารสนเทศ 
             สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง 
             © All Rights Reserved, 2021</p> </div>

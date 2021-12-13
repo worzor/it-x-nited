@@ -17,21 +17,33 @@ a{
 	cursor: pointer;
 }
 .credit{
-	width: 100%;
 	height: auto;
-	padding: 1vh 0;
-	text-align: center;
-	color: #FD2D2D;
+	padding: 1vh 10vw;
+	text-align: left;
+	color: #fff8f8;
 }
 .credit p{
 	font-size: 0.9vw;
-	padding: 0 26vw;
+	padding-left: 5vw;
+}
+.credit-img{
+	margin: 0 0.3vw;
+	width: auto;
+	height: 70px;
 }
 .pause {
     animation-play-state: paused;
 }
 .mini-nav-bar{
 	width: 0; height: 0;
+}
+.hint-icon{
+  	width: 1vw; height: 1vw; padding: 0vh 0.3vw;
+}
+.hint-des{
+	color: #FD2D2D;
+	padding: 1vh 1vw;
+	position: absolute; top: 15vh; font-size: 0.9vw;
 }
 /*Font*/
 section h1,
@@ -53,6 +65,15 @@ header a {
 }
 .mini-nav-content{
 	display: none; text-align: end; padding: 0 10vw;
+}
+.ans{
+	color: #FD2D2D;
+	font-size: 2.5vw;
+	line-height: 1;
+}
+.ansname{
+	color: #929292;
+	font-size: 1vw;
 }
 .name {
 	font-size: max(19px, 2vw);
@@ -110,6 +131,7 @@ body {
 	background-color: #222222;
 	font-family: "Kanit", sans-serif;
 	overflow-x: hidden;
+	line-height: 1.6;
 }
 /*ScrollBar*/
 body::-webkit-scrollbar {
@@ -338,7 +360,7 @@ section.sec-sm2{
 }
 
 #section-nm-3 {
-	margin-bottom: 500px;
+	margin-bottom: 200px;
 }
 
 #section-nm-7 p,
@@ -1477,6 +1499,9 @@ img.pos-mock-10{
 
 /*สำหรับ mac*/
 @media (max-width: 1280px){
+	.credit-img{
+		height: 50px;
+	}
 	.armAnim{
 		right: -100px;
 		top: -100px;
@@ -2394,5 +2419,28 @@ img.pos-mock-10{
 	.credit p{
 		font-size: x-small;
 		padding: 0 3vw;
+	}
+	.credit{
+		text-align: center;
+	}
+	.credit-img{
+		height: 0;
+		width: 0;
+	}
+	.mob-center-ar{
+		left: 30vw;
+	}
+	#loading-sc {
+		object-fit: cover;
+	}
+	.ans{
+		font-size: max(16px, 1.5vw);
+	}
+	.ansname{
+		font-size: max(14px, 1.3vw);
+	}
+	.hint-des{
+		font-size: 0;
+		visibility: hidden;
 	}
   }

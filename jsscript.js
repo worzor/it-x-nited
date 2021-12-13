@@ -9,6 +9,12 @@ function onscrollFunction(page) {
     if(page == 1){
         var sec_1H = document.getElementById("section-nm-1").getBoundingClientRect().y;
         var sec_2H = document.getElementById("section-nm-1-2").getBoundingClientRect().y;
+        if(sec_1H <= 0){
+            document.getElementById("backarrow").style.opacity = 1;
+        }
+        if(sec_1H >= 0){
+            document.getElementById("backarrow").style.opacity = 0;
+        }
         if(sec_1H - winH/1.5 < 0 && sec_1H + winH/2 - winH/2 > 0){ /*เทียบความสูง ระหว่างของบน เเละ ขอบล่าง ของ section 1 เเละ 2*/
             if(((sec_1H - winH/3) * -1) * 0.005 > 0){
                 document.body.style.setProperty("--scale", ((sec_1H - winH/3) * -1) * 0.0035);
@@ -208,7 +214,8 @@ function mockup_call(){
 function loading_Function() {
     myVar = setTimeout(showPage, 3000);
   }
-  
+
+
 function showPage() {
     document.getElementById("loading-sc").style.display = "none";
     document.body.style.overflowY = "auto";
